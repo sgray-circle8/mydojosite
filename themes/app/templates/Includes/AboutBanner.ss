@@ -8,8 +8,8 @@
 							<h1><span>About</span></h1>
 							<ol class="breadcrumb">
 								<li class="dropdown">
-        							<!--a href="/index.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home</a-->
-                                    <a href="index.php">Home</a>
+        							<!--a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home</a-->
+                                    <a href="/">Home</a>
 		        				</li>
 								<li class="active">About</li>
 							</ol>

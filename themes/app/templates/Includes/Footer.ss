@@ -36,15 +36,12 @@
 									<ul class="links">
                                         <li><a href="events">Events</a></li>
                                         <li><a href="stories">Stories</a></li>
-                                        <!--li><a href="blog.php">Blog</a></li-->
                                         <li><a href="contact">Contact</a></li>
 									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!-- Links Ends -->
-					<!-- Contact Starts -->
 					<div class="col-lg-3 contact">
 						<div class="block">
 							<h1>Contacts</h1>
@@ -59,7 +56,7 @@
                                 </li>
 								<li>
 									<div class="icon"><i class="fa fa-map-marker"></i></div>
-									<div class="text">80 Underhill Road, Featherston</div>
+									<div class="text">12 Waite St, Featherston</div>
 								</li>
 							</ul>
 						</div>
@@ -68,13 +65,6 @@
 				</div>
 			</div>
 		</footer>
-		<!-- /. FOOTER ENDS
-			========================================================================= -->
-		<!-- COPYRIGHT STARTS
-			========================================================================= -->
-
-		<!-- /. COPYRIGHT ENDS
-			========================================================================= -->
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

@@ -2,8 +2,6 @@
 <main>
 	
 <div id="contents" class="content-container unit size4of4 lastUnit">
-	<!-- TRAINING CONTENTS STARTS
-			========================================================================= -->
 		<div class="classes">
 			<div class="container">
 				<div class="row intro">
@@ -13,7 +11,6 @@
 					</div>
 				</div>
 
-				<!-- Ryūtai Undō -->
 				<div class="row block">
 					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 						<div class="picture"><img src="/assets/images/training/training-taiso.png" class="img-responsive" alt="" ></div>
@@ -32,9 +29,7 @@
 						</div>
 					</div>
 				</div>
-				<!-- End Ryūtai Undō -->
 
-				<!-- Ukemi -->
 				<div class="row block">
 					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                         <div class="picture"><img src="/assets/images/training/training-ukemi.mp4" class="img-responsive" alt="" ></div>
@@ -59,9 +54,7 @@
 						</div>
 					</div>
 				</div>
-				<!-- End Ukemi -->
 
-				<!-- Kihon Gata -->
 				<div class="row block">
 					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 						<div class="picture"><img src="/assets/images/training/training-kihon.png" class="img-responsive" alt="" ></div>
@@ -78,14 +71,12 @@
                                 <strong>Gogyō No Kata</strong> (five techniques that deal with lines of attack and different strikes) and
                                 <strong>Kihon Happō</strong> (eight techniques that use fundamental postures to defend against basic punches and grabs). Additionally,
                                 the <strong>Tenchijin Ryaku No Maki</strong> comprises a "best of Bujinkan basics" text containing other fundamental techniques derived from
-                                <a href="about.php" style="color:red;">the 9 Bujinkan Ryū-ha</a>.
+                                <a href="/about" style="color:red;">the 9 Bujinkan Ryū-ha</a>.
                             </div>
 						</div>
 					</div>
 				</div>
-				<!-- End Kihon Gata -->
 
-				<!-- Ryū-ha No Waza -->
 				<div class="row block">
 					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 						<div class="picture"><img src="/assets/images/training/training-ryuha.png" class="img-responsive" alt="" ></div>
@@ -94,7 +85,7 @@
 						<div class="info">
 							<div class="dept">Ryū-ha No Waza・流派の技<br /><span class="name">techniques from the Ryū-ha</span></div>
 							<div class="description">
-                                The above fundamentals are but small sub-sets of the teachings contained in the <a href="about.php" style="color: red;">9 Bujinkan Ryū-ha</a>. Each of the 9 has a wide range of
+                                The above fundamentals are but small sub-sets of the teachings contained in the <a href="/about" style="color: red;">9 Bujinkan Ryū-ha</a>. Each of the 9 has a wide range of
                                 techniques, armed and unarmed, with it's own specialities in strategy, target points, movement style, and weaponry. Exploring these in context
                                 allows us to step into a space where we can learn the lessons that these specialities have to teach. Generally speaking, these techniques
                                 include <strong><i>a wide variety of punches, grabs, kicks, strikes, joint locks, chokes, holds, and throws</i></strong>, in addition to armed techniques incorporating
@@ -104,9 +95,7 @@
 						</div>
 					</div>
 				</div>
-				<!-- End Ryū-ha No Waza -->
 
-                <!-- Jiyū-na Keiko -->
                 <div class="row block">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                         <div class="picture"><img src="/assets/images/training/trainining-jiyuu.png" class="img-responsive" alt="" ></div>
@@ -126,9 +115,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- End Jiyū-na Keiko -->
 
-                <!-- Seishin-teki Kyōyō -->
                 <div class="row block">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                         <div class="picture"><img src="/assets/images/training/training-seishin.png" class="img-responsive" alt="" ></div>
@@ -140,21 +127,14 @@
                                 With great power comes great responsibility, and a strong person without conscience is a danger to themselves and those around
                                 them. It's important that those who would acquire the skill that comes with martial arts training also possess a true heart
                                 (<i>Magokoro</i>, 真心）that guides their decisions and actions, and to this end our Dōjō members are required to have read and agree with the
-                                <a href="guidelines.php">Guidelines for Participation in Bujinkan Training</a> issued by Hatsumi Sōke. Spiritual refinement requires awareness,
+                                <a href="/guidelines">Guidelines for Participation in Bujinkan Training</a> issued by Hatsumi Sōke. Spiritual refinement requires awareness,
                                 and awareness begins with the fundamental concept of being aware of our own motives and thoughts, and of how our actions will affect others.
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- End Seishin-teki Kyōyō -->
-
-
-
             </div>
 		</div>
-		<!-- /. CLASSES CONTENTS ENDS
-			========================================================================= -->
-	
 </div>
 
 </main>

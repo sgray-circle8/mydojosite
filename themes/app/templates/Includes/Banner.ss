@@ -8,7 +8,7 @@
 							<h1><span>$MenuTitle</span></h1>
 							<ol class="breadcrumb">
 								<li class="dropdown">
-        							<!--a href="/index.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home</a-->
+        							<!--a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home</a-->
                                     <!--a href="home">Home</a>
 		        				</li>
 								<li class="active">$MenuTitle</li>
