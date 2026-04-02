@@ -289,7 +289,7 @@ ol.breadcrumb li a {
 
 .engage {
 	padding-top: 70px;
-	padding-bottom: 60px;
+	padding-bottom: 20px;
 }
 .engage h1 {
 	font-size: 18px;
@@ -304,6 +304,7 @@ ol.breadcrumb li a {
 	text-transform: uppercase;
 	text-align: center;
 	line-height: 80px;
+	margin-top: 20px;
 }
 .engage h2 strong {
 	font-weight: 800;
@@ -2933,9 +2934,10 @@ footer .contact .block ul li .text a {
 	padding-bottom: 6px;
 }
 .engage {
-	padding-left: 40px;
-	padding-right: 40px;
 	text-align: center;
+}
+.engage__summary {
+	text-align: left;
 }
 .index-partners {
 	margin-top: 2px;

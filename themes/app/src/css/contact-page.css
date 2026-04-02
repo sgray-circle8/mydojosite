@@ -75,8 +75,8 @@
 }
 
 #UserForm_Form_10_action_process:hover {
-    color: #f83131;
-    background-color: transparent;
+    color: #f83131 !important;
+    background-color: black;
     border: 2px solid #f83131;
 }
 
@@ -86,4 +86,10 @@
 
 #UserForm_Form_10_EditableTextField_c471b {
     color: #000;
+}
+
+.map iframe {
+    width: 100%;
+    min-height: 450px;
+    display: block; /* Removes bottom gap */
 }
