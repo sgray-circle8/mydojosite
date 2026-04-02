@@ -38,6 +38,9 @@
         }
     },
     "extra": {
+        "expose": [
+            "themes/app/dist"
+        ],
         "project-files": [
             "app/_config/*",
             ".env.example"
