@@ -20,8 +20,8 @@
 - Event Listing Page
   > "Events"
 - Event Page
-- Kudos Page
-  > "Kudos"
+- Stories Page
+  > "Stories"
 - Contact Page
   - CTATitle
   - CTABody

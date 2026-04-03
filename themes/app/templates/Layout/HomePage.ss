@@ -1,37 +1,20 @@
 
 <main>
     <div id="contents" class="content-container unit size4of4 lastUnit">
-        <div class="container engage">
-            <div class="row no-gutter-8 no-gutter-4 row__left-align">
-                <div class="col-lg-8 col-md-8 engage__summary">
-                    <h1>The Bujinkan Way</h1>
-                    <div class="description">
-                        Experience the essence of authentic Japanese martial arts in an informal, non-competitive atmosphere.<br />
-                        Develop your abilities and grow to master yourself physically, mentally, and spiritually.<br />
-                        Learn effective and efficient self-defense techniques.<br />
-                        Discover ways of applying martial arts strategy & philosophy to the challenges of daily life.<br />
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="blue-bg">
-                        <h2><a href="/contact" style="color: #fff;"><strong>Keep Going</strong> - Take the next step now</a></h2>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <% loop $ElementalArea.Elements.Filter('ClassName', 'App\Blocks\CTABlockFullWidth') %>
+            $Me
+        <% end_loop %>
 
         <div class="container index-blocks">
             <div class="row no-gutter-4">
                 <div class="rowheight row-height">
-                    <div class="col-lg-4 col-md-4 column col-height col-top box light-grey-bg">
-                        <h1>Bujinkan Budō</h1>
-                        <div class="description">
-                            is a complete set of martial arts skills and philosophy directly inherited from family lineages of feudal Japan.
-                            These arts have not been watered down for modern sporting application, retaining their practical approach.
-                        </div>
-                        <div class="button"><a href="/about">More</a></div>
+                    <% loop $ElementalArea.Elements.Filter('ClassName', 'App\Blocks\TextBlock') %>
+                        $Me
+                    <% end_loop %>
+
+                    <div class="col-lg-4 col-md-4 column col-height col-top">
+                      <img src="/assets/images/home/kick.png" class="img-responsive" alt="" >
                     </div>
-                    <div class="col-lg-4 col-md-4 column col-height col-top"><img src="/assets/images/home/kick.png" class="img-responsive" alt="" ></div>
 
                     <div class="col-lg-4 col-md-4 column col-height col-top box blue-bg course">
                         <h3>場所・予定表</h3>
@@ -46,7 +29,10 @@
 
             <div class="row no-gutter-4 no-gutter-8">
                 <div class="rowheight row-height">
-                    <div class="col-lg-8 col-md-8 column col-height col-top"><img src="/assets/images/home/hands-on.png" class="img-responsive" alt="" ></div>
+                    <div class="col-lg-8 col-md-8 column col-height col-top">
+                      <img src="/assets/images/home/hands-on.png" class="img-responsive" alt="" >
+                    </div>
+
                     <div class="col-lg-4 col-md-4 column col-height col-top box light-grey-bg">
                         <h1>Hands On</h1>
                         <div class="description">

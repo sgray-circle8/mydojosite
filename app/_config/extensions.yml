@@ -1,3 +1,7 @@
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - App\Extensions\SiteConfigExtension
+
+HomePage:
+  extensions:
+    - DNADesign\Elemental\Extensions\ElementalPageExtension

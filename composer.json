@@ -12,6 +12,7 @@
     },
     "require": {
         "php": "^8.3",
+        "dnadesign/silverstripe-elemental": "^6",
         "silverstripe/blog": "^5",
         "silverstripe/htmleditor-tinymce": "1.0.2",
         "silverstripe/login-forms": "^6",
