@@ -2965,12 +2965,6 @@ footer .contact .block ul li .text a {
 .news-carousel.owl-theme .owl-controls {
 	margin-top: 60px!important;
 }
-.classes .block .info {
-	padding-top: 40px;
-}
-.trainer .block .info {
-	padding-top: 40px;
-}
 .contacts .form {
 	padding-bottom: 40px;
 }
@@ -2989,3 +2983,7 @@ footer .links ul.links {
 }
 
 /* ---------------------------------------------------------------------------- MEDIA QURIES ENDS ------------------ */
+
+.navbar-container {
+	padding-left: 0;
+}

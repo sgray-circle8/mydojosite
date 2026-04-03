@@ -2,7 +2,7 @@
 <main>
     <div id="contents" class="content-container unit size4of4 lastUnit">
         <div class="container engage">
-            <div class="row no-gutter-8 no-gutter-4">
+            <div class="row no-gutter-8 no-gutter-4 row__left-align">
                 <div class="col-lg-8 col-md-8 engage__summary">
                     <h1>The Bujinkan Way</h1>
                     <div class="description">

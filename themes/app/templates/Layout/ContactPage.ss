@@ -23,7 +23,7 @@
                                 <li class="clearfix">
                                     <div class="icon"><i class="fa fa-map-marker"></i></div>
                                     <div class="text">
-                                        <strong>Ryūgyoku An / Fareham House</strong><br />
+                                        <strong>Ryūgyoku An・龍玉庵</strong><br />
                                         12 Waite St, Featherston<br />
                                         Mondays 18:30 - 20:00<br />
                                         Fridays 18:30 - 20:00
