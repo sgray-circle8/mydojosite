@@ -1,12 +1,112 @@
-# graydojo
+# graydojo.org website
+
+## Common Components
+### Header
+- Logo
+- Nav Bar
+  - Nav Item
+
+### Footer
+- Site Map (2 Col)
+- Contacts
+  - Email
+  - URL
+  - Location
+
+## Page Types
+- Home Page
+- Content Page
+  > "About", "Training", "Instructor"
+- Event Listing Page
+  > "Events"
+- Event Page
+- Kudos Page
+  > "Kudos"
+- Contact Page
+  - CTATitle
+  - CTABody
+  - ContactForm
+  - LocationsTitle
+
+## Blocks
+### CTA Block (Full Width)
+> Used on: Home Page
+- CTABody
+  - Title
+  - Summary
+- CTAButton
+  - ButtonText
+  - ButtonURL
+
+### Text Block
+> Used on: Home Page
+- BackgroundColour
+- ForegroundColour
+- Title
+- Summary
+- TextBlockButton [Optional]
+  - ButtonText
+  - ButtonURL
+
+### ImageBlock
+> Used on: Home Page
+- Image
+
+### Details Block
+> Used on: Home Page
+- Title
+- SubTitle
+- Content
+
+### BuyuBlock (Friends, Associates, Partners, Etc)
+> Used on: Home Page
+- Title
+- BuyuItem (has_many)
+
+### CTA Block (Restricted Width)
+> Used on: Home Page
+- BackgroundColour
+- ForegroundColour
+- Title
+- CTABody
+- CTAButton
+  - ButtonText
+  - ButtonURL
+
+### About Block
+> Used on: About Page
+- Title
+- Subtitle
+- Content
+- Image1
+- Image1Caption
+- Image2
+- Image2Caption
+
+### Gallery
+> Used on: About Page
+- Title
+- Images
+
+### Image Text Block
+> Used on: Content Page
+- Image [Optional]
+- Video
+- MediaPlacement (L / R)
+- Title
+- SubTitle
+- Content
+
 
 # To Do
-- Add 2022 Kagamibiraki news/photo
-- Update `Friends` section on home page
+- Home Page
+  - `Friends` Block ("Partners", "Associates", "Buyu")
+  - Random quotes
+- Events block
+  - Add 2022 Kagamibiraki news/photo
 - Add phpunit
 - Add functionality for compiled styles
 - Organise styling
-- Update events (events block)
-- Random quotes
 - Blog
   - Investigate comment approval mechanism
+- Silvershop?
