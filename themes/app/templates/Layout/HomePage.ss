@@ -12,9 +12,9 @@
                         $Me
                     <% end_loop %>
 
-                    <div class="col-lg-4 col-md-4 column col-height col-top">
-                      <img src="/assets/images/home/kick.png" class="img-responsive" alt="" >
-                    </div>
+                    <% loop $ElementalArea.Elements.Filter('ClassName', 'App\Blocks\ImageBlock') %>
+                        $Me
+                    <% end_loop %>
 
                     <div class="col-lg-4 col-md-4 column col-height col-top box blue-bg course">
                         <h3>場所・予定表</h3>
