@@ -22,7 +22,7 @@ class CTABlockFullWidth extends BaseElement
 
     private static bool $inline_editable = false;
 
-    private static string $icon = 'font-icon-bullhorn';
+    private static string $icon = 'font-icon-attention-1';
 
     private static array $db = [
         'CTASummary' => 'Text',

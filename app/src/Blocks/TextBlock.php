@@ -22,11 +22,11 @@ class TextBlock extends BaseElement
 
     private static bool $inline_editable = false;
 
-    private static string $icon = 'font-icon-align-justify';
+    private static string $icon = 'font-icon-p-document';
 
     private static array $db = [
-        'BackgroundColour' => 'Varchar(10)',
-        'ForegroundColour' => 'Varchar(10)',
+        'SubTitle' => 'Varchar(25)',
+        'BGColour' => 'Enum("Light Grey, Dark Grey, Red", "Light Grey")',
         'BlockSummary' => 'Text',
         'ButtonText' => 'Varchar(10)',
     ];
@@ -47,8 +47,15 @@ class TextBlock extends BaseElement
         $fields->addFieldsToTab(
             'Root.Main',
             [
+                TextField::create(
+                    'SubTitle',
+                    'Subtitle'
+                )->setDescription('Optional'),
                 TextareaField::create('BlockSummary', 'Summary'),
-                TextField::create('ButtonText', 'Button Text'),
+                TextField::create(
+                    'ButtonText',
+                    'Button Text'
+                )->setDescription('If this is left blank, the block will have no button.'),
                 TreeDropdownField::create(
                     'LinkedPageID',
                     'Linked Page',
