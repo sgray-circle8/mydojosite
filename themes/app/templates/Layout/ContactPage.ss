@@ -47,7 +47,7 @@
             <div class="row no-gutter-12">
                 <div class="col-lg-12 map">
                   <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m1m3!1d2988.34!2d175.32!3d-41.11!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d411d3333333333%3A0x3333333333333333!2s80%20Underhill%20Rd%2C%20Featherston%205773!5e0!3m2!1sen!2snz!4v1234567890"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m1m3!1d2988.34!2d175.32!3d-41.11!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d411d3333333333%3A0x3333333333333333!2s12%20Waite%20St%2C%20Featherston%205773!5e0!3m2!1sen!2snz!4v1234567890"
                       width="100%"
                       height="450"
                       style="border:0;"
