@@ -1,8 +1,5 @@
-
-
-		<!-- STRIP STARTS
-			========================================================================= -->
-		<div class="totop-strip blue-bg">
+		<%-- Red Strip --%>
+		<div class="totop-strip red-bg">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10"><img src="/assets/images/logos/logo-bgd-ftr.png" alt="" ></div>
@@ -12,14 +9,11 @@
 				</div>
 			</div>
 		</div>
-		<!-- /. STRIP ENDS
-			========================================================================= -->
-		<!-- FOOTER STARTS
-			========================================================================= -->
+
+		<%-- Footer --%>
 		<footer class="dark-grey-bg">
 			<div class="container">
 				<div class="row">
-					<!-- Links Starts -->
 					<div class="col-lg-5 links">
 						<div class="block">
 							<h1>Site Map</h1>
@@ -61,7 +55,6 @@
 							</ul>
 						</div>
 					</div>
-					<!-- Contact Ends -->
 				</div>
 			</div>
 		</footer>

@@ -5,86 +5,19 @@
             $Me
         <% end_loop %>
 
-        <div class="container index-blocks">
-            <div class="row no-gutter-4">
-                <div class="rowheight row-height">
-                    <% loop $ElementalArea.Elements.Filter('ClassName', 'App\Blocks\TextBlock') %>
-                        $Me
-                    <% end_loop %>
-
-                    <% loop $ElementalArea.Elements.Filter('ClassName', 'App\Blocks\ImageBlock') %>
-                        $Me
-                    <% end_loop %>
-
-                    <div class="col-lg-4 col-md-4 column col-height col-top box blue-bg course">
-                        <h3>場所・予定表</h3>
-                        <h4>Where & When</h4>
-                        <br />
-                        <div class="chimon">
-                            $Schedule
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row no-gutter-4 no-gutter-8">
-                <div class="rowheight row-height">
-                    <div class="col-lg-8 col-md-8 column col-height col-top">
-                      <img src="/assets/images/home/hands-on.png" class="img-responsive" alt="" >
-                    </div>
-
-                    <div class="col-lg-4 col-md-4 column col-height col-top box light-grey-bg">
-                        <h1>Hands On</h1>
-                        <div class="description">
-                            instruction with an experienced mentor and a good group of people makes for a supportive environment in which to learn, grow,
-                            and develop your abilities - in new ways that may surprise you!
-                        </div>
-                        <div class="button"><a href="/training">More</a></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row no-gutter-4">
-                <div class="rowheight row-height">
-                    <div class="col-lg-4 col-md-4 column col-height col-top box blue-bg course">
-                        <h1>Words of Wisdom</h1>
-                        <div class="description">
-                            "To get this to work you have to move very lightly and naturally so that your opponent does not feel you pulling. Otherwise, your opponent will pull back."<br />
-                            -- <i>Understand? Good. Play!</i>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-4 column col-height col-top box light-grey-bg">
-                        <h1>Self Defense</h1>
-                        <div class="description">
-                            means thinking outside the box and applying unorthodox methods to defeat larger, stronger opponents.
-                            Learn how to manipulate balance and respond to pressure in ways that let you stay safe.
-                        </div>
-
-                    </div>
-                    <div class="col-lg-4 col-md-4 column col-height col-top"><img src="/assets/images/home/self-defense.png" class="img-responsive" alt="" ></div>
-                </div>
-            </div>
-
-            <div class="row no-gutter-4 no-gutter-8">
-                <div class="rowheight row-height">
-                    <div class="col-lg-4 col-md-4 column col-height col-top box light-grey-bg">
-                        <h1><span style="color: red;">忍</span> Endurance</h1>
-                        <div class="description">
-                            is the philosophy at the heart of Bujinkan Budō - to keep going despite all obstacles,
-                            with patience and equanimity of spirit. Learning to persevere in the face of difficulty equips us for life outside the Dōjō as well.
-                        </div>
-                    </div>
-                    <div class="col-lg-8 col-md-8 column col-height col-top"><img src="/assets/images/home/kashima_jingu.jpg" class="img-responsive" alt="" ></div>
-                </div>
-            </div>
+      <div class="container index-blocks">
+        <div class="row no-gutter-4 flex-container">
+            <% loop $ElementalArea.Elements.Exclude('ClassName', 'App\Blocks\CTABlockFullWidth') %>
+                $Me
+            <% end_loop %>
         </div>
+      </div>
 
-        <div class="container index-blocks">
-            <div class="row no-gutter-4">
-                <div class="rowheight row-height">
+<%--        <div class="container index-blocks">--%>
+<%--            <div class="row no-gutter-4">--%>
+<%--                <div class="rowheight row-height">--%>
 
-                    <!-- News Block Carousel -->
+<%--                    <!-- News Block Carousel -->--%>
 <%--                    <div class="col-lg-4 col-md-4 clearfix column col-height col-top index-news light-grey-bg">--%>
 <%--                        <div class="news-carousel clearfix">--%>
 <%--                            <!-- News: Kiso Gata Workshop -->--%>
@@ -197,82 +130,82 @@
 
 <%--                        </div>--%>
 <%--                    </div>--%>
-                    <!-- end News Row -->
+<%--                    <!-- end News Row -->--%>
 
-                    <!-- Friends Block -->
-                    <div class="col-lg-4 col-md-4 column col-height col-top index-partners light-grey-bg">
-                        <div class="block">
-                            <h1>Friends・武友</h1>
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <a href="https://www.facebook.com/bujinkandojonorthshore/" target="_blank" title="Bujinkan Catchingbutterfly Dojo, Auckland">
-                                        <img src="/assets/images/home/host-catchingbutterfly.jpg" class="img-responsive center-block" alt="" >
-                                    </a>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <a href="https://www.bujinkannewzealand.net/" target="_blank">
-                                        <img src="/assets/images/home/host-hiryudojo.png" class="img-responsive center-block" title="Bujinkan Simon Gaunt, Hamilton" >
-                                    </a>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <a href="http://www.bujinkanweatheralldojo.com/" target="_blank">
-                                        <img src="/assets/images/home/host-weatheralldojo.jpg" class="img-responsive center-block" title="Bujinkan Weatherall Dojo, Christchurch" >
-                                    </a>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <a href="http://www.bujinkan-brussel.be/dojowebsite/" target="_blank">
-                                        <img src="/assets/images/home/host-numayadojo.jpg" class="img-responsive center-block" title="Bujinkan Numaya Dojo, Belgium" >
-                                    </a>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <a href="http://www.bdn.se/" target="_blank">
-                                        <img src="/assets/images/home/host-norkoppingdojo.png" class="img-responsive center-block" title="Bujinkan Norrköping, Sweden" >
-                                    </a>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <a href="https://www.facebook.com/BujinkanBushinDojo/" target="_blank">
-                                        <img src="/assets/images/home/host-bushindojo.jpg" class="img-responsive center-block" title="Bujinkan Bushin Dojo, Sweden" >
-                                    </a>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <a href="http://www.budo.org/" target="_blank">
-                                        <img src="/assets/images/home/host-goteborgdojo.jpg" class="img-responsive center-block" title="Bujinkan Dojo Göteborg, Sweden" >
-                                    </a>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <a href="http://www.abbybujinkan.com/" target="_blank">
-                                        <img src="/assets/images/home/host-abbotsforddojo.jpg" class="img-responsive center-block" title="Abbotsford Bujinkan, Canada" >
-                                    </a>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <a href="http://www.namiyama.com/" target="_blank">
-                                        <img src="/assets/images/home/host-namiyama.png" class="img-responsive center-block" title="Bujinkan Namiyama Dojo, Canada" >
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<%--                    <!-- Friends Block -->--%>
+<%--                    <div class="col-lg-4 col-md-4 column col-height col-top index-partners light-grey-bg">--%>
+<%--                        <div class="block">--%>
+<%--                            <h1>Friends・武友</h1>--%>
+<%--                            <div class="row">--%>
+<%--                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">--%>
+<%--                                    <a href="https://www.facebook.com/bujinkandojonorthshore/" target="_blank" title="Bujinkan Catchingbutterfly Dojo, Auckland">--%>
+<%--                                        <img src="/assets/images/home/host-catchingbutterfly.jpg" class="img-responsive center-block" alt="" >--%>
+<%--                                    </a>--%>
+<%--                                </div>--%>
+<%--                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">--%>
+<%--                                    <a href="https://www.bujinkannewzealand.net/" target="_blank">--%>
+<%--                                        <img src="/assets/images/home/host-hiryudojo.png" class="img-responsive center-block" title="Bujinkan Simon Gaunt, Hamilton" >--%>
+<%--                                    </a>--%>
+<%--                                </div>--%>
+<%--                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">--%>
+<%--                                    <a href="http://www.bujinkanweatheralldojo.com/" target="_blank">--%>
+<%--                                        <img src="/assets/images/home/host-weatheralldojo.jpg" class="img-responsive center-block" title="Bujinkan Weatherall Dojo, Christchurch" >--%>
+<%--                                    </a>--%>
+<%--                                </div>--%>
+<%--                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">--%>
+<%--                                    <a href="http://www.bujinkan-brussel.be/dojowebsite/" target="_blank">--%>
+<%--                                        <img src="/assets/images/home/host-numayadojo.jpg" class="img-responsive center-block" title="Bujinkan Numaya Dojo, Belgium" >--%>
+<%--                                    </a>--%>
+<%--                                </div>--%>
+<%--                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">--%>
+<%--                                    <a href="http://www.bdn.se/" target="_blank">--%>
+<%--                                        <img src="/assets/images/home/host-norkoppingdojo.png" class="img-responsive center-block" title="Bujinkan Norrköping, Sweden" >--%>
+<%--                                    </a>--%>
+<%--                                </div>--%>
+<%--                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">--%>
+<%--                                    <a href="https://www.facebook.com/BujinkanBushinDojo/" target="_blank">--%>
+<%--                                        <img src="/assets/images/home/host-bushindojo.jpg" class="img-responsive center-block" title="Bujinkan Bushin Dojo, Sweden" >--%>
+<%--                                    </a>--%>
+<%--                                </div>--%>
+<%--                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">--%>
+<%--                                    <a href="http://www.budo.org/" target="_blank">--%>
+<%--                                        <img src="/assets/images/home/host-goteborgdojo.jpg" class="img-responsive center-block" title="Bujinkan Dojo Göteborg, Sweden" >--%>
+<%--                                    </a>--%>
+<%--                                </div>--%>
+<%--                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">--%>
+<%--                                    <a href="http://www.abbybujinkan.com/" target="_blank">--%>
+<%--                                        <img src="/assets/images/home/host-abbotsforddojo.jpg" class="img-responsive center-block" title="Abbotsford Bujinkan, Canada" >--%>
+<%--                                    </a>--%>
+<%--                                </div>--%>
+<%--                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">--%>
+<%--                                    <a href="http://www.namiyama.com/" target="_blank">--%>
+<%--                                        <img src="/assets/images/home/host-namiyama.png" class="img-responsive center-block" title="Bujinkan Namiyama Dojo, Canada" >--%>
+<%--                                    </a>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
 
-                    <div class="col-lg-4 col-md-4 column col-height col-top index-pricing medium-grey-bg-2">
-                        <div class="action-carousel">
-                            <div class="block">
-                                <h1>Regular Classes - First Class Free!</h1>
-                                <ul>
-                                    <li><i class="fa fa-mobile"></i> Find out if Bujinkan is for you</li>
-                                    <li><i class="fa fa-user"></i> Join one of our regular classes</li>
-                                    <li><i class="fa fa-thumbs-up"></i> Any comfortable clothing is ok</li>
-                                    <li><i class="fa fa-heartbeat"></i> Train at your own level</li>
-                                    <li><i class="fa fa-clock-o"></i> Train Mondays and/or Fridays</li>
-                                    <li><i class="fa fa-user"></i> Learn from the ground up</li>
-                                    <li><i class="fa fa-heartbeat"></i> Safe, supportive environment</li>
-                                    <li><i class="fa fa-thumbs-up"></i> Hands-on instruction</li>
-                                </ul>
-                                <div class="button"><a href="/contact" class="white">Sign up</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<%--                    <div class="col-lg-4 col-md-4 column col-height col-top index-pricing medium-grey-bg-2">--%>
+<%--                        <div class="action-carousel">--%>
+<%--                            <div class="block">--%>
+<%--                                <h1>Regular Classes - First Class Free!</h1>--%>
+<%--                                <ul>--%>
+<%--                                    <li><i class="fa fa-mobile"></i> Find out if Bujinkan is for you</li>--%>
+<%--                                    <li><i class="fa fa-user"></i> Join one of our regular classes</li>--%>
+<%--                                    <li><i class="fa fa-thumbs-up"></i> Any comfortable clothing is ok</li>--%>
+<%--                                    <li><i class="fa fa-heartbeat"></i> Train at your own level</li>--%>
+<%--                                    <li><i class="fa fa-clock-o"></i> Train Mondays and/or Fridays</li>--%>
+<%--                                    <li><i class="fa fa-user"></i> Learn from the ground up</li>--%>
+<%--                                    <li><i class="fa fa-heartbeat"></i> Safe, supportive environment</li>--%>
+<%--                                    <li><i class="fa fa-thumbs-up"></i> Hands-on instruction</li>--%>
+<%--                                </ul>--%>
+<%--                                <div class="button"><a href="/contact" class="white">Sign up</a></div>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
     </div>
 </main>

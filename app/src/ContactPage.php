@@ -47,7 +47,7 @@ namespace {
             //$get = DataObject::get_by_id('UserDefinedForm',10);
             $page = UserDefinedForm::get()->filter(['URLSegment' => 'contactform'])->First();
             $form = (new UserDefinedFormController($page))->Form();
-            $form->enableSpamProtection();
+//            $form->enableSpamProtection();
             return $form;
         }
     }

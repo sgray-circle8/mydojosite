@@ -1,5 +1,11 @@
 # graydojo.org website
 
+## Breakpoints
+- 1200px  // Desktop
+- 992px   // Tablet Large
+- 768px   // Tablet Small
+- < 768px // Mobile
+
 ## Common Components
 ### Header
 - Logo
@@ -99,6 +105,10 @@
 
 
 # To Do
+- Footer
+  - Reduce black space above and below red strip 
+  - Dynamic SiteMap links
+  - Dynamic Contact links
 - Home Page
   - `Friends` Block ("Partners", "Associates", "Buyu")
   - Random quotes
