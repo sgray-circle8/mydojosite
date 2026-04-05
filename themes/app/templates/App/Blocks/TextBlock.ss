@@ -1,5 +1,5 @@
 <div class="
-  col-lg-4 col-md-4 column col-height col-top
+  col-lg-4 col-md-4 col-xs-12 column col-height col-top
   box
   <% if $BGColour == "Red" %>
     red-bg
@@ -14,10 +14,12 @@
   <div class="description">
     $BlockSummary
   </div>
-  <div class="button">
-    <a
-      href="$LinkedPage.Link"
-      <% if $BGColour != "Light Grey" %>class="white"<% end_if %>
-    >$ButtonText</a>
-  </div>
+  <% if $ButtonText %>
+    <div class="button">
+      <a
+        href="$LinkedPage.Link"
+        <% if $BGColour != "Light Grey" %>class="white"<% end_if %>
+      >$ButtonText</a>
+    </div>
+  <% end_if %>
 </div>
