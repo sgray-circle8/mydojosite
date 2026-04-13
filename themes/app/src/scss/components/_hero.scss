@@ -8,6 +8,11 @@
     opacity: 0.8;
   }
 
+  &-cta a:focus {
+    outline-color: var(--accent);
+    outline-offset: 4px;
+  }
+
   &-inner {
     display: flex;
     flex-direction: column;

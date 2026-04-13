@@ -2,10 +2,32 @@
   display:flex;
   align-items:center;
   gap:12px;
+
+  a:focus {
+    border-radius: 75px;
+    outline-offset: 2px;
+    outline-color: var(--accent);
+  }
+
+  a:hover {
+    img {
+      border: 2px solid transparent;
+      border-radius: 50%;
+      border-spacing: 3px;
+    }
+  }
 }
 
 .logo {
-  height:78px;
+  height: 78px;
+
+  &--footer {
+    height: 32px;
+
+    img {
+      filter: invert(1);
+    }
+  }
 }
 
 .site-title {

@@ -1,64 +1,52 @@
-footer {
-  .site-footer {
-    grid-column: 1/-1;
-    text-align: center;
-    color: var(--muted);
-    font-size: 0.9rem;
-    padding: 12px 0;
+.footer-links-area {
+  margin-top: 2rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  padding: var(--pad);
+
+  h2 {
+    font-size: 1.1rem;
+    color: #111827;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
 
-  /* --- FOOTER LINKS --- */
-  .footer {
-    &-links-area {
-      margin-top: 2rem;
-      display: grid;
-      gap: 2rem;
-      grid-template-columns: 1fr;
-      padding: var(--pad);
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
-      h2 {
-        font-size: 1.1rem;
-        color: #111827;
-        margin-bottom: 1.25rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
+  li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
 
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
+  a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
 
-      li {
-        margin-bottom: 12px;
-        display: flex;
-        align-items: flex-start;
-        gap: 12px;
-        color: var(--muted);
-        font-size: 0.95rem;
-      }
-
-      a {
-        color: var(--muted);
-        text-decoration: none;
-        transition: color 0.2s;
-
-        &:hover {
-          color: var(--accent);
-        }
-      }
-
-      .icon {
-        color: var(--accent);
-        width: 20px;
-        margin-top: 3px;
-      }
-
-      @media (min-width: 768px) {
-        grid-template-columns: 2fr 1fr;
-      }
+    &:hover {
+      color: var(--accent);
+      text-decoration: underline;
     }
+  }
+
+  .icon {
+    color: var(--accent);
+    width: 20px;
+    margin-top: 3px;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: 2fr 1fr;
   }
 }
 
@@ -86,6 +74,10 @@ footer {
         color: var(--accent);
         font-size: 0.9rem;
       }
+
+      a:hover {
+        text-decoration: underline;
+      }
     }
 
     @media (min-width: 768px) {
@@ -93,17 +85,5 @@ footer {
       grid-template-columns: 1fr 2fr;
       gap: 1rem;
     }
-  }
-
-  &-block {
-    @media (min-width: 768px) {
-      order: 1;
-    }
-  }
-}
-
-.contact-block {
-  @media (min-width: 768px) {
-    order: 2;
   }
 }

@@ -1,20 +1,20 @@
-<!-- <header class="header" role="banner">
-	<div class="inner">
-		<div class="unit size4of4 lastUnit">
-			<a href="$BaseHref" class="brand" rel="home">
-				<h1>$SiteConfig.Title</h1>
-				<% if $SiteConfig.Tagline %>
-				<p>$SiteConfig.Tagline</p>
-				<% end_if %>
-			</a>
-			<% if $SearchForm %>
-				<span class="search-dropdown-icon">L</span>
-				<div class="search-bar">
-					$SearchForm
-				</div>
-			<% end_if %>
-			<% include Navigation %>
-		</div>
+<header class="card site-header" role="banner">
+	<div class="brand">
+		<a href="/">
+			<img src="/_resources/themes/app/dist/img/DragonEnsoRyuUn.svg" class="logo" alt="Site Logo">
+		</a>
+		<span class="site-title">$SiteConfig.Title</span>
 	</div>
+
+	<button class="menu-toggle" id="menuBtn" aria-label="Toggle navigation">
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
+
+	<nav class="primary" id="mainNav">
+		<% loop $Menu(1) %>
+			<a href="$Link" class="<% if $LinkingMode == 'current' %>active<% end_if %>">$MenuTitle</a>
+		<% end_loop %>
+	</nav>
 </header>
- -->

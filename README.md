@@ -7,6 +7,12 @@
 - < 768px // Mobile
 
 ## Common Components
+### Logos
+The logo used in both the header and footer is the same svg file,
+whose path is hard-coded in the header and footer templates.  Using svg 
+allows the same file to be used for both logos, however the CMS prevents
+upload of svg files, which is why the path is hard-coded.
+
 ### Header
 - Logo
 - Nav Bar

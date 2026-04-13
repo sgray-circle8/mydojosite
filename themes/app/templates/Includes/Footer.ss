@@ -1,206 +1,105 @@
-		<%-- Red Strip --%>
-		<div class="totop-strip red-bg">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10"><img src="/assets/images/logos/logo-bgd-ftr.png" alt="" ></div>
-					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-						<div class="scrollup"><a href="#"></a></div>
-					</div>
-				</div>
+<section class="footer-strip">
+	<div class="container">
+		<div class="strip-inner">
+			<div class="strip-logo">
+				<span class="logo--footer">
+					<img src="/_resources/themes/app/dist/img/DragonEnsoRyuUn.svg" style="max-width:32px; max-height:32px;background-color: black; fill: white;">
+				</span>
+				<strong style="font-size: 1.1rem; letter-spacing: 1px; font-style: italic;">
+					$SiteConfig.Tagline
+				</strong>
 			</div>
+
+			<button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top">
+				↑
+			</button>
 		</div>
+	</div>
+</section>
 
-		<%-- Footer --%>
-		<footer class="dark-grey-bg">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-5 links">
-						<div class="block">
-							<h1>Site Map</h1>
-							<div class="row">
-								<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-									<ul class="links">
-										<li><a href="home">Home</a></li>
-										<li><a href="about">About</a></li>
-										<li><a href="training">Training</a></li>
-										<li><a href="instructor">Instructor</a></li>
-									</ul>
-								</div>
-								<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-									<ul class="links">
-                                        <li><a href="events">Events</a></li>
-                                        <li><a href="stories">Stories</a></li>
-                                        <li><a href="contact">Contact</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 contact">
-						<div class="block">
-							<h1>Contacts</h1>
-							<ul>
-                                <li>
-                                    <div class="icon"><i class="fa fa-envelope"></i></div>
-                                    <div class="text"><a href="mailto:bujinkan@graydojo.org">bujinkan@graydojo.org</a></div>
-                                </li>
-								<li>
-                                    <div class="icon"><i class="fa fa-facebook"></i></div>
-                                    <div class="text"><a href="https://www.facebook.com/graydojo/" target="_blank">https://www.facebook.com/graydojo/</a></div>
-                                </li>
-								<li>
-									<div class="icon"><i class="fa fa-map-marker"></i></div>
-									<div class="text">12 Waite St, Featherston</div>
-								</li>
-							</ul>
-						</div>
-					</div>
+<div class="wrap" style="background: white; border-top: 1px solid #eee;">
+	<div class="container">
+		<div class="footer-links-area">
+
+			<!-- Contacts -->
+			<div class="contact-block">
+				<h2>Contacts</h2>
+				<ul>
+					<li>
+						<div class="icon"><i class="fa fa-envelope"></i></div>
+						<div class="text"><a href="mailto:$SiteConfig.ContactEmail">$SiteConfig.ContactEmail</a></div>
+					</li>
+					<li>
+						<div class="icon"><i class="fa-brands fa-facebook"></i></div>
+						<div class="text"><a href="#" target="_blank">$SiteConfig.FacebookLink</a></div>
+					</li>
+					<li>
+						<div class="icon"><i class="fa fa-map-marker"></i></div>
+						<div class="text">$SiteConfig.ContactAddress</div>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Site Map -->
+			<div class="sitemap-block">
+				<h2>Site Map</h2>
+				<div class="sitemap-columns">
+					<% loop $Menu(1) %>
+						<%--
+							If it's the first Menu item, output the opening unordered list tag
+						--%>
+						<% if $Pos == 1 %>
+						<ul>
+						<% end_if %>
+						<%--
+							A column should have at most 4 items, so
+							if this is the 5th Menu item
+							close the previous list and start a new one
+						--%>
+						<% if $Pos == 5 %>
+						</ul>
+						<ul>
+						<% end_if %>
+						<li>
+							<a href="$Link" class="<% if $LinkingMode == 'current' %>active<% end_if %>">
+								$MenuTitle
+							</a>
+						</li>
+						<%--
+							If it's the last Menu item, output the final closing unordered list tag
+						--%>
+						<% if $Last %>
+						</ul>
+						<% end_if %>
+					<% end_loop %>
 				</div>
 			</div>
-		</footer>
 
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="/_resources/themes/app/dist/js/bootstrap.min.js"></script>
-		<!-- REVOLUTION JS FILES -->
-		<script type="text/javascript" src="/revolution/js/jquery.themepunch.tools.min.js"></script>
-		<script type="text/javascript" src="/revolution/js/jquery.themepunch.revolution.min.js"></script>
-		<!-- SLIDER REVOLUTION 5.0 EXTENSIONS
-			(Load Extensions only on Local File Systems !
-			The following part can be removed on Server for On Demand Loading) -->
-		<script type="text/javascript" src="/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-		<script type="text/javascript" src="/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-		<script type="text/javascript" src="/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-		<script type="text/javascript" src="/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-		<script type="text/javascript" src="/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-		<script type="text/javascript" src="/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-		<script type="text/javascript" src="/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-		<script type="text/javascript" src="/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-		<script type="text/javascript" src="/revolution/js/extensions/revolution.extension.video.min.js"></script>
-		<script type="text/javascript">
-			var tpj=jQuery;
-			var revapi4;
-			tpj(document).ready(function() {
-				if(tpj("#rev_slider_46_1").revolution == undefined){
-					revslider_showDoubleJqueryError("#rev_slider_46_1");
-				}else{
-					revapi4 = tpj("#rev_slider_46_1").show().revolution({
-						sliderType:"standard",
-						jsFileLocation:"/revolution/js/",
-						sliderLayout:"fullscreen",
-						dottedOverlay:"none",
-						delay:9000,
-						navigation: {
-							keyboardNavigation:"off",
-							keyboard_direction: "horizontal",
-							mouseScrollNavigation:"off",
-							onHoverStop:"off",
-							touch:{
-								touchenabled:"on",
-								swipe_threshold: 75,
-								swipe_min_touches: 1,
-								swipe_direction: "horizontal",
-								drag_block_vertical: false
-							}
-							,
-							arrows: {
-								style:"zeus",
-								enable:true,
-								hide_onmobile:true,
-								hide_under:600,
-								hide_onleave:true,
-								hide_delay:200,
-								hide_delay_mobile:1200,
-								tmp:'<div class="tp-title-wrap">  	<div class="tp-arr-imgholder"></div> </div>',
-								left: {
-									h_align:"left",
-									v_align:"center",
-									h_offset:30,
-									v_offset:0
-								},
-								right: {
-									h_align:"right",
-									v_align:"center",
-									h_offset:30,
-									v_offset:0
-								}
-							}
-							,
-							bullets: {
-								enable:true,
-								hide_onmobile:true,
-								hide_under:600,
-								style:"metis",
-								hide_onleave:true,
-								hide_delay:200,
-								hide_delay_mobile:1200,
-								direction:"horizontal",
-								h_align:"center",
-								v_align:"bottom",
-								h_offset:0,
-								v_offset:30,
-								space:5,
-								tmp:'<span class="tp-bullet-img-wrap">  <span class="tp-bullet-image"></span></span><span class="tp-bullet-title">{{title}}</span>'
-							}
-						},
-						viewPort: {
-							enable:true,
-							outof:"pause",
-							visible_area:"80%"
-						},
-						responsiveLevels:[1240,1024,778,480],
-						gridwidth:[1240,1024,778,480],
-						gridheight:[600,600,500,400],
-						lazyType:"none",
-						parallax: {
-							type:"mouse",
-							origo:"slidercenter",
-							speed:2000,
-							levels:[2,3,4,5,6,7,12,16,10,50],
-						},
-						shadow:0,
-						spinner:"off",
-						stopLoop:"off",
-						stopAfterLoops:-1,
-						stopAtSlide:-1,
+		</div>
+	</div>
+</div>
 
-						fullScreenAlignForce:"off",
-						fullScreenOffsetContainer: "",
-						fullScreenOffset: "0px",
-						disableProgressBar:"on",
-						hideThumbsOnMobile:"off",
+<script>
+	const menuBtn = document.getElementById('menuBtn');
+	const mainNav = document.getElementById('mainNav');
+	const overlay = document.getElementById('overlay');
 
-						shuffle:"off",
-						autoHeight:"off",
-						hideThumbsOnMobile:"off",
-						hideSliderAtLimit:0,
-						hideCaptionAtLimit:0,
-						hideAllCaptionAtLilmit:0,
-						debugMode:false,
-						fallbacks: {
-							simplifyAll:"off",
-							nextSlideOnWindowFocus:"off",
-							disableFocusListener:false,
-						}
-					});
-				}
-			});	/*ready*/
-		</script>
-		<!-- Isotope Gallery -->
-		<script type="text/javascript" src="/_resources/themes/app/dist/js/isotope/jquery.isotope.min.js"></script>
-		<script type="text/javascript" src="/_resources/themes/app/dist/js/isotope/custom-isotope-mansory.js"></script>
-		<!-- Magnific Popup core JS file -->
-<%--		<script type="text/javascript" src="/_resources/themes/app/dist/js/magnific-popup/jquery.magnific-popup.js"></script>--%>
-		<!-- Owl Carousel -->
-<%--		<script type="text/javascript" src="/_resources/themes/app/dist/js/owl-carousel/owl.carousel.js"></script>--%>
-        <!-- FitVids -->
-		<script type="text/javascript" src="/_resources/themes/app/dist/js/fitvids/jquery.fitvids.js"></script>
-		<!-- ScrollTo -->
-<%--		<script type="text/javascript" src="/_resources/themes/app/dist/js/nav/jquery.scrollTo.js"></script>--%>
-<%--		<script type="text/javascript" src="/_resources/themes/app/dist/js/nav/jquery.nav.js"></script>--%>
-		<!-- Sticky -->
-<%--		<script type="text/javascript" src="/_resources/themes/app/dist/js/sticky/jquery.sticky.js"></script>--%>
-		<!-- Custom JS -->
-		<script src="/_resources/themes/app/dist/js/custom/custom.js"></script>
+	function toggleMenu() {
+		menuBtn.classList.toggle('active');
+		mainNav.classList.toggle('active');
+		overlay.classList.toggle('active');
+	}
 
+	menuBtn.addEventListener('click', toggleMenu);
+	overlay.addEventListener('click', toggleMenu);
+
+	// Close menu when a link is clicked
+	const navLinks = mainNav.querySelectorAll('a');
+	navLinks.forEach(link => {
+		link.addEventListener('click', () => {
+			menuBtn.classList.remove('active');
+			mainNav.classList.remove('active');
+			overlay.classList.remove('active');
+		});
+	});
+</script>
