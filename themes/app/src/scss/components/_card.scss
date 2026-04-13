@@ -1,0 +1,18 @@
+.card {
+  background:var(--card);
+  padding:var(--pad);
+
+  .col {
+    width: 100%;
+    padding: 1rem;
+    max-height: 390px;
+
+    @media (min-width: 768px) {
+      padding: 2rem;
+    }
+
+    @media (min-width: 1100px) {
+      padding: 4.5rem;
+    }
+  }
+}

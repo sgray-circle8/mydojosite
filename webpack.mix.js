@@ -26,30 +26,12 @@ const sassOptions = {
 
 // Mix the Javascript and Scss
 mix
-    .js(`${srcFolder}/js/bootstrap.js`, "/js/")
-    .js(`${srcFolder}/js/bootstrap.min.js`, "/js/")
-    .js(`${srcFolder}/js/script.js`, "/js/")
-    .js(`${srcFolder}/js/custom/custom.js`, "/js/custom/")
-    .js(`${srcFolder}/js/fitvids/jquery.fitvids.js`, "/js/fitvids/")
-    .js(`${srcFolder}/js/isotope/custom-isotope.js`, "/js/isotope/")
-    .js(`${srcFolder}/js/isotope/custom-isotope-mansory.js`, "/js/isotope/")
-    .js(`${srcFolder}/js/isotope/jquery.isotope.min.js`, "/js/isotope/")
-    .js(`${srcFolder}/js/isotope/jquery-1.7.1.min.js`, "/js/isotope/")
-    .js(`${srcFolder}/js/nav/jquery.js`, "/js/nav/")
-    // .js(`${srcFolder}/js/nav/jquery.nav.js`, "/js/nav/")
-    // .js(`${srcFolder}/js/nav/jquery.scrollTo.js`, "/js/nav/")
-    // .js(`${srcFolder}/js/sticky/jquery.sticky.js`, "/js/sticky/")
-    // .js(`${srcFolder}/js/magnific-popup/jquery.magnific-popup.js`, "/js/magnific-popup/")
-    // .js(`${srcFolder}/js/owl-carousel/owl.carousel.js`, "/js/owl-carousel/")
+    // JS
+    // .js(`${srcFolder}/js/bootstrap.js`, "/js/")
+    // Vue
     .vue({ version: 3 })
-    // .sass(`${srcFolder}/scss/app.scss`, "/", sassOptions)
-    .css(`${srcFolder}/css/contact-page.css`, "/")
-    .css(`${srcFolder}/css/editor.css`, "/")
-    .css(`${srcFolder}/css/form.css`, "/")
-    .css(`${srcFolder}/css/gray.css`, "/")
-    .css(`${srcFolder}/css/layout.css`, "/")
-    .css(`${srcFolder}/css/reset.css`, "/")
-    .css(`${srcFolder}/css/typography.css`, "/")
+    // SCSS
+    .sass(`${srcFolder}/scss/app.scss`, "/css", sassOptions)
 
 // Copy css
 mix.copyDirectory(`${srcFolder}/css`, `${distFolder}/css`);
@@ -58,8 +40,8 @@ mix.copyDirectory(`${srcFolder}/css`, `${distFolder}/css`);
 // mix.copyDirectory(`${srcFolder}/css`, `${distFolder}/css`);
 
 // Copy fonts
-mix.copyDirectory(`${srcFolder}/fonts`, `${distFolder}/fonts`);
-mix.copyDirectory(`${srcFolder}/webfonts`, `${distFolder}/webfonts`);
+// mix.copyDirectory(`${srcFolder}/fonts`, `${distFolder}/fonts`);
+// mix.copyDirectory(`${srcFolder}/webfonts`, `${distFolder}/webfonts`);
 
 // Copy 'revolution/'
 // mix.copyDirectory(`${srcFolder}/revolution`, `${distFolder}/revolution`);

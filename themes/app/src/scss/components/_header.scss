@@ -1,0 +1,17 @@
+.site-header {
+  grid-column: 1 / -1;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  position: sticky;
+  top: 0;
+  z-index:1000;
+  box-shadow: rgb(0 0 0 / 45%) 0 0 3px 0;
+  padding: 0.3rem 1rem;
+  margin-bottom: 0;
+
+  @media (min-width: 768px) {
+    grid-column: 1 / -1;
+  }
+}

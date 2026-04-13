@@ -1,0 +1,32 @@
+.btn{
+  display:inline-block;
+  padding:10px 14px;
+  background:var(--accent);
+  color:#fff;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.button {
+  margin-top: 1rem;
+  border: 2px solid var(--muted);
+  text-align: center;
+  padding: 0.2rem;
+  max-width: 5rem;
+
+  a {
+    text-decoration: none;
+    color: var(--muted);
+    font-weight: 700;
+  }
+
+  &:hover {
+    border: 2px solid var(--muted);
+    background-color: var(--accent);
+
+    a {
+      color: white;
+    }
+  }
+}
