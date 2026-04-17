@@ -4,6 +4,12 @@
 
 <div class="blocks-wrapper">
   <% loop $ElementalArea.Elements.Exclude('ClassName', 'App\Blocks\CTABlockFullWidth') %>
-    $Me
+    <% if $ClassName != 'App\Blocks\RecentEventsBlock' %>
+      $Me
+    <% end_if %>
   <% end_loop %>
 </div>
+
+<% loop $ElementalArea.Elements.Filter('ClassName', 'App\Blocks\RecentEventsBlock') %>
+  $Me
+<% end_loop %>

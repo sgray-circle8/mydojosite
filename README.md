@@ -28,7 +28,7 @@ upload of svg files, which is why the path is hard-coded.
 ## Page Types
 - Home Page
 - Content Page
-  > "About", "Training", "Teachers"
+  > "About", "Training", "Mentors"
 - Event Listing Page
   > "Events"
 - Event Page
@@ -65,6 +65,10 @@ upload of svg files, which is why the path is hard-coded.
 - Image
 
 ### RecentEvents Block
+> Strip out unnecessary Event class functions
+- I can see the 4 most recent events on the home page
+- When I click on an event image / link, I am taken to the associated Event Page
+- I can see a "Show all -->" button that links to the Event Listing Page
 
  ### BuyuBlock (Friends, Associates, Partners, Etc)
 > Used on: Home Page

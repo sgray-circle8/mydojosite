@@ -2,8 +2,8 @@
 
 namespace App\DataObjects\Events;
 
-use App\DataObjects\Events\EventVendor;
-use App\DataObjects\Events\EventParticipantDojo;
+use App\Blocks\RecentEventsBlock;
+use SilverStripe\Assets\Image;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;
@@ -26,9 +26,11 @@ class Event extends DataObject
     ];
 
     private static array $has_one = [
+        'EventImage' => Image::class,
         'EventType' => EventType::class,
         'EventLocation' => EventLocation::class,
         'HostDojo' => EventParticipantDojo::class,
+        'RecentEventsBlock' => RecentEventsBlock::class,
     ];
 
     private static array $has_many = [
@@ -44,16 +46,13 @@ class Event extends DataObject
         $fields = parent::getCMSFields();
 
         $fields->removeByName([
-            'Details',
-        ]);
-
-        // Has One Relationships
-        $fields->removeByName([
             'EventTypeID',
             'EventLocationID',
             'HostDojoID',
             'Registrations',
             'Vendors',
+            'Details',
+            'RecentEventsBlockID'
         ]);
 
         $fields->addFieldToTab(
@@ -88,32 +87,26 @@ class Event extends DataObject
             HTMLEditorField::create('Details', 'Details')
         );
 
-        // 1. Create the configuration
         $config = GridFieldConfig_RecordEditor::create();
 
-        // 2. Define the desired summary fields for the EventRegistration GridField
         $summaryFields = [
-            // These field names must exist on the EventRegistration class (either in $db, $has_one, or as a method)
-            'EventParticipant.FullName' => 'Participant', // Accesses the related Participant's FullName
+            'EventParticipant.FullName' => 'Participant',
             'PaymentDate' => 'Date Paid',
             'PaymentAmount' => 'Amount',
-            // If you have a custom method on EventRegistration to format the payment, use it:
-            // 'RegistrationFormattedPaymentAmount' => 'Paid',
             'Memo' => 'Memo',
         ];
 
-        // 3. Get the DataColumns component and set the display fields
         /** @var GridFieldDataColumns $dataColumns */
         $dataColumns = $config->getComponentByType(GridFieldDataColumns::class);
         $dataColumns->setDisplayFields($summaryFields);
 
         $fields->addFieldToTab(
-            'Root.Registrations', // The tab title
+            'Root.Registrations',
             GridField::create(
-                'Registrations', // Field name
-                'Event Registrations', // Label displayed above the GridField
-                $this->Registrations(), // Source DataList
-                $config // Pass the configured object
+                'Registrations',
+                'Event Registrations',
+                $this->Registrations(),
+                $config
             )
         );
 
@@ -132,5 +125,4 @@ class Event extends DataObject
 
         return '$' . $sumRegPmtDecimals;
     }
-
 }

@@ -17,7 +17,7 @@
 	</div>
 </section>
 
-<div class="wrap" style="background: white; border-top: 1px solid #eee;">
+<div class="wrap">
 	<div class="container">
 		<div class="footer-links-area">
 
