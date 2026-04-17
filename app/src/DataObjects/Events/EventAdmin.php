@@ -1,0 +1,156 @@
+<?php
+
+namespace App\DataObjects\Events;
+
+use App\DataObjects\Events\Event;
+use App\DataObjects\Events\EventLocation;
+use App\DataObjects\Events\EventParticipant;
+use App\DataObjects\Events\EventRegistration;
+use App\DataObjects\Events\EventType;
+use App\DataObjects\Events\EventVendorService;
+use App\DataObjects\Events\EventParticipantDojo;
+use SilverStripe\Admin\ModelAdmin;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\Form;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
+use SilverStripe\Forms\GridField\GridFieldDataColumns;
+
+class EventAdmin extends ModelAdmin
+{
+    private static string $menu_title = 'Events';
+
+    private static string $url_segment = 'event-admin';
+
+    private static float $menu_priority = -0.20;
+
+    private static array $managed_models = [
+        Event::class,
+        EventRegistration::class,
+        EventParticipant::class,
+        EventParticipantDojo::class,
+        EventType::class,
+        EventLocation::class,
+        EventVendor::class,
+        EventVendorService::class,
+    ];
+
+    public function getEditForm($id = null, $fields = null): Form
+    {
+        $form = parent::getEditForm($id, $fields);
+
+        $modelGridFieldConfig = GridFieldConfig_RecordEditor::create();
+
+        if ($this->modelClass === Event::class) {
+            $summaryFields = [
+                'Title' => 'Title',
+                'StartDate' => 'Date',
+                'NumberRegistrations' => 'Registered',
+                'TotalRegistrationPmtReceived' => 'Reg In',
+            ];
+
+            $modelGridField = GridField::create(
+                'Event',
+                'Event',
+                Event::get(),
+                $modelGridFieldConfig
+            );
+        } elseif ($this->modelClass === EventVendorService::class) {
+            $summaryFields = [
+                'ServiceName' => 'Service Name',
+            ];
+
+            $modelGridField = GridField::create(
+                'EventVendorService',
+                'Service',
+                EventVendorService::get(),
+                $modelGridFieldConfig
+            );
+        } elseif ($this->modelClass === EventVendor::class) {
+            $summaryFields = [
+                'VendorName' => 'Vendor Name',
+                'VendorContactName' => 'Contact',
+                'VendorServiceName' => 'Provides',
+                'VendorContactPhone' => 'Tel',
+                'VendorContactEmail' => 'Email',
+            ];
+
+            $modelGridField = GridField::create(
+                'EventVendor',
+                'Vendor',
+                EventVendor::get(),
+                $modelGridFieldConfig
+            );
+        } elseif ($this->modelClass === EventParticipantDojo::class) {
+            $summaryFields = [
+                'DojoName' => 'Name',
+                'DojoLocation' => 'Location',
+            ];
+
+            $modelGridField = GridField::create(
+                'EventParticipantDojo',
+                'Dojo',
+                EventParticipantDojo::get(),
+                $modelGridFieldConfig
+            );
+        } elseif ($this->modelClass === EventParticipant::class) {
+            $summaryFields = [
+                'GivenName' => 'Name',
+                'FamilyName' => 'LName',
+            ];
+
+            $modelGridField = GridField::create(
+                'EventParticipant',
+                'Participant',
+                EventParticipant::get(),
+                $modelGridFieldConfig
+            );
+        } elseif ($this->modelClass === EventRegistration::class) {
+            $summaryFields = [
+                'EventTitle' => 'Title',
+                'EventParticipantFullName' => 'Name',
+                'PaymentDate' => 'Date',
+                'RegistrationFormattedPaymentAmount' => 'Paid',
+            ];
+
+            $modelGridField = GridField::create(
+                'EventRegistration',
+                'Registration',
+                EventRegistration::get(),
+                $modelGridFieldConfig
+            );
+        } elseif ($this->modelClass === EventType::class) {
+            $summaryFields = [
+                'EventTypeName' => 'Type',
+            ];
+
+            $modelGridField = GridField::create(
+                'EventType',
+                'Type',
+                EventType::get(),
+                $modelGridFieldConfig
+            );
+        } elseif ($this->modelClass === EventLocation::class) {
+            $summaryFields = [
+                'Title' => 'Title',
+                'Address' => 'Address',
+            ];
+
+            $modelGridField = GridField::create(
+                'EventLocation',
+                'Location',
+                EventLocation::get(),
+                $modelGridFieldConfig
+            );
+        }
+
+        $dataColumns = $modelGridFieldConfig->getComponentByType(GridFieldDataColumns::class);
+        $dataColumns->setDisplayFields($summaryFields);
+        $modelFields = FieldList::create($modelGridField);
+
+        $form->setFields($modelFields);
+
+        return $form;
+    }
+
+}

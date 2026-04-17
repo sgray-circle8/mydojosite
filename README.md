@@ -28,7 +28,7 @@ upload of svg files, which is why the path is hard-coded.
 ## Page Types
 - Home Page
 - Content Page
-  > "About", "Training", "Instructor"
+  > "About", "Training", "Teachers"
 - Event Listing Page
   > "Events"
 - Event Page
@@ -60,17 +60,13 @@ upload of svg files, which is why the path is hard-coded.
   - ButtonText
   - ButtonURL
 
-### ImageBlock
+### Image Block
 > Used on: Home Page
 - Image
 
-### Details Block
-> Used on: Home Page
-- Title
-- SubTitle
-- Content
+### RecentEvents Block
 
-### BuyuBlock (Friends, Associates, Partners, Etc)
+ ### BuyuBlock (Friends, Associates, Partners, Etc)
 > Used on: Home Page
 - Title
 - BuyuItem (has_many)
@@ -111,18 +107,13 @@ upload of svg files, which is why the path is hard-coded.
 
 
 # To Do
-- Footer
-  - Reduce black space above and below red strip 
-  - Dynamic SiteMap links
-  - Dynamic Contact links
 - Home Page
-  - `Friends` Block ("Partners", "Associates", "Buyu")
+  - Header: mobile nav focus trap
   - Random quotes
+  - Block text font and line spacing
+  - `Friends` Block ("Partners", "Associates", "Buyu")
 - Events block
-  - Add 2022 Kagamibiraki news/photo
 - Add phpunit
-- Add functionality for compiled styles
-- Organise styling
 - Blog
   - Investigate comment approval mechanism
 - Silvershop?
