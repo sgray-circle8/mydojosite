@@ -20,6 +20,12 @@
     transform-origin: center;
   }
 
+  &:hover,
+  &:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 0.3rem;
+  }
+
   /* Hide the mobile menu toggle on desktop */
   @media (min-width:768px) {
     display: none;
@@ -112,12 +118,12 @@ nav.primary {
   display: none;
   z-index: 900;
 
+  &.active {
+    display: block;
+  }
+
   @media (min-width: 768px) {
     display: none !important;
   }
-}
-
-.nav-overlay.active {
-  display: block;
 }
 

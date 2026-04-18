@@ -83,18 +83,50 @@
 	const menuBtn = document.getElementById('menuBtn');
 	const mainNav = document.getElementById('mainNav');
 	const overlay = document.getElementById('overlay');
+	const navLinks = mainNav.querySelectorAll('a');
+	const lastNavLink = navLinks[navLinks.length - 1];
 
 	function toggleMenu() {
-		menuBtn.classList.toggle('active');
+		const isActive = menuBtn.classList.toggle('active');
 		mainNav.classList.toggle('active');
 		overlay.classList.toggle('active');
+
+		// Set focus when the menu opens
+		if (isActive) {
+			menuBtn.focus();
+		}
 	}
 
 	menuBtn.addEventListener('click', toggleMenu);
 	overlay.addEventListener('click', toggleMenu);
 
+	// Focus Trap
+	window.addEventListener('keydown', (e) => {
+		if (!mainNav.classList.contains('active')) return;
+
+		const isTabPressed = e.key === 'Tab';
+		const isEscPressed = e.key === 'Escape';
+
+		if (isEscPressed) {
+			toggleMenu();
+		}
+
+		if (!isTabPressed) return;
+
+		if (e.shiftKey) {
+			if (document.activeElement === menuBtn) {
+				lastNavLink.focus();
+				e.preventDefault();
+			}
+		} else {
+			if (document.activeElement === lastNavLink) {
+				menuBtn.focus();
+				e.preventDefault();
+			}
+		}
+	});
+
 	// Close menu when a link is clicked
-	const navLinks = mainNav.querySelectorAll('a');
 	navLinks.forEach(link => {
 		link.addEventListener('click', () => {
 			menuBtn.classList.remove('active');

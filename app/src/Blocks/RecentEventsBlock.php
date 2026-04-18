@@ -24,7 +24,7 @@ class RecentEventsBlock extends BaseElement
 
     private static bool $inline_editable = false;
 
-    private static string $icon = 'font-icon-p-document';
+    private static string $icon = 'font-icon-p-event-alt';
 
     private static array $db = [
         'BGColour' => 'Enum("Light Grey, Dark Grey, Red", "Light Grey")',
