@@ -5,3 +5,6 @@ SilverStripe\SiteConfig\SiteConfig:
 HomePage:
   extensions:
     - DNADesign\Elemental\Extensions\ElementalPageExtension
+ContentPage:
+  extensions:
+    - DNADesign\Elemental\Extensions\ElementalPageExtension

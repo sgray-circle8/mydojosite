@@ -75,6 +75,8 @@ nav.primary {
 
     &.active {
       font-weight: bold;
+      text-decoration: underline;
+      text-underline-offset: 0.3rem;
     }
 
     &:hover {

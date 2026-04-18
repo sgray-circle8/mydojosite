@@ -19,7 +19,7 @@
     <link rel="manifest" href="/assets/images/logos/site.webmanifest" />
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" type="text/css" href="/_resources/themes/app/dist/css/app.css?m=1776469244">
+<link rel="stylesheet" type="text/css" href="/_resources/themes/app/dist/css/app.css?m=1776576634">
 </head>
 <body>
 <div class="nav-overlay" id="overlay"></div>
@@ -45,7 +45,7 @@
 		
 			<a href="/" class="">Home</a>
 		
-			<a href="/about-us/" class="">About</a>
+			<a href="/about/" class="">About</a>
 		
 			<a href="/training/" class="">Training</a>
 		
@@ -141,7 +141,7 @@
 						
 						
 						<li>
-							<a href="/about-us/" class="">
+							<a href="/about/" class="">
 								About
 							</a>
 						</li>
@@ -222,18 +222,50 @@
 	const menuBtn = document.getElementById('menuBtn');
 	const mainNav = document.getElementById('mainNav');
 	const overlay = document.getElementById('overlay');
+	const navLinks = mainNav.querySelectorAll('a');
+	const lastNavLink = navLinks[navLinks.length - 1];
 
 	function toggleMenu() {
-		menuBtn.classList.toggle('active');
+		const isActive = menuBtn.classList.toggle('active');
 		mainNav.classList.toggle('active');
 		overlay.classList.toggle('active');
+
+		// Set focus when the menu opens
+		if (isActive) {
+			menuBtn.focus();
+		}
 	}
 
 	menuBtn.addEventListener('click', toggleMenu);
 	overlay.addEventListener('click', toggleMenu);
 
+	// Focus Trap
+	window.addEventListener('keydown', (e) => {
+		if (!mainNav.classList.contains('active')) return;
+
+		const isTabPressed = e.key === 'Tab';
+		const isEscPressed = e.key === 'Escape';
+
+		if (isEscPressed) {
+			toggleMenu();
+		}
+
+		if (!isTabPressed) return;
+
+		if (e.shiftKey) {
+			if (document.activeElement === menuBtn) {
+				lastNavLink.focus();
+				e.preventDefault();
+			}
+		} else {
+			if (document.activeElement === lastNavLink) {
+				menuBtn.focus();
+				e.preventDefault();
+			}
+		}
+	});
+
 	// Close menu when a link is clicked
-	const navLinks = mainNav.querySelectorAll('a');
 	navLinks.forEach(link => {
 		link.addEventListener('click', () => {
 			menuBtn.classList.remove('active');

@@ -1,0 +1,15 @@
+---
+Name: pages
+---
+HomePage:
+  disallowed_elements:
+    - DNADesign\Elemental\Models\ElementContent
+ContentPage:
+  allowed_elements:
+    - App\Blocks\TextImageBlock
+  disallowed_elements:
+    - DNADesign\Elemental\Models\ElementContent
+    - App\Blocks\CTABlockFullWidth
+    - App\Blocks\ImageBlock
+    - App\Blocks\RecentEventsBlock
+    - App\Blocks\TextBlock

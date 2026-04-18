@@ -4,7 +4,6 @@ namespace App\Blocks;
 
 use App\DataObjects\Events\Event;
 use DNADesign\Elemental\Models\BaseElement;
-use SilverStripe\Blog\Model\BlogPost;
 use SilverStripe\CMS\Model\SiteTree;
 use Silverstripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;

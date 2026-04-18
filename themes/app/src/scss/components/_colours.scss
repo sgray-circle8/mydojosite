@@ -1,12 +1,16 @@
+.light-grey-bg {
+  background-color: #ececec !important;
+}
+
+.dark-grey-bg {
+  background-color: var(--muted) !important;
+}
+
 .red-bg {
   color: #fff;
   background-color: #f83131;
 }
 
-.grey-bg {
-  background-color: #c9e2cc;
-}
-
-.light-grey-bg {
-  background-color: #ececec;
+.white-bg {
+  background-color: #fff;
 }

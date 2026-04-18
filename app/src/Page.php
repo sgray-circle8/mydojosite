@@ -9,5 +9,15 @@ namespace {
         private static $db = [];
 
         private static $has_one = [];
+
+        public function getCMSFields()
+        {
+            $fields = parent::getCMSFields();
+            $fields->removeByName([
+                'Content',
+            ]);
+
+            return $fields;
+        }
     }
 }

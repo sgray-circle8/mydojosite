@@ -3,6 +3,8 @@
 namespace App\DataObjects\Events;
 
 use App\Blocks\RecentEventsBlock;
+use DateTime;
+use EventsListingPage;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\FieldList;
@@ -10,6 +12,7 @@ use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\GridField\GridFieldDataColumns;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataObject;
 
 class Event extends DataObject
@@ -23,6 +26,7 @@ class Event extends DataObject
         'StartTime' => 'Time',
         'EndTime' => 'Time',
         'Details' => 'HTMLText',
+        'FacebookURL' => 'Varchar',
     ];
 
     private static array $has_one = [
@@ -31,6 +35,7 @@ class Event extends DataObject
         'EventLocation' => EventLocation::class,
         'HostDojo' => EventParticipantDojo::class,
         'RecentEventsBlock' => RecentEventsBlock::class,
+        'EventListingPage' => EventsListingPage::class,
     ];
 
     private static array $has_many = [
@@ -52,7 +57,8 @@ class Event extends DataObject
             'Registrations',
             'Vendors',
             'Details',
-            'RecentEventsBlockID'
+            'RecentEventsBlockID',
+            'EventListingPageID',
         ]);
 
         $fields->addFieldToTab(
@@ -80,6 +86,11 @@ class Event extends DataObject
                 'Host Dojo',
                 EventParticipantDojo::get()->map('ID', 'DojoName')
             )->setEmptyString('')
+        );
+
+        $fields->addFieldToTab(
+            'Root.Main',
+            TextField::create('FacebookURL', 'FB Event Page URL'),
         );
 
         $fields->addFieldToTab(
@@ -124,5 +135,37 @@ class Event extends DataObject
         $sumRegPmtDecimals = number_format($sumRegPmtRaw, 2, '.', '');
 
         return '$' . $sumRegPmtDecimals;
+    }
+
+    public function getEventLocationTitle(): ?string
+    {
+        return $this->EventLocation()->Title;
+    }
+
+    public function getEventLocationAddress(): ?string
+    {
+        return $this->EventLocation()->Address;
+    }
+
+    public function EventHostDojo(): ?string
+    {
+        return $this->HostDojo()->DojoName;
+    }
+
+    public function IsPast(): bool
+    {
+        if (!$this->StartDate && !$this->EndDate) {
+            return false;
+        }
+
+        $today = new DateTime();
+
+        if ($this->EndDate) {
+            $endDate = new DateTime($this->EndDate);
+            return $endDate < $today;
+        } else {
+            $startDate = new DateTime($this->StartDate);
+            return $startDate < $today;
+        }
     }
 }

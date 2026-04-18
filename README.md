@@ -28,17 +28,50 @@ upload of svg files, which is why the path is hard-coded.
 ## Page Types
 - Home Page
 - Content Page
-  > "About", "Training", "Mentors"
+  - "About", "Training", "Mentors"
+
 - Event Listing Page
-  > "Events"
+  - Page Title h1
+  - List Events descending StartDate
+  - For each Event
+      - Full-width card 
+      - Date @ Time - Date @ Time
+        - If no EndDate or if EndDate == StartDate, omit EndDate
+      - Title (h2 or h3), linked to Event Page
+      - Summary (truncated to x characters if needed)
+
 - Event Page
-- Stories Page
-  > "Stories"
+  - Link back to Event Listing Page
+  - An 'event has passed' message if the EndDate is in the past
+    - Or if there is no EndDate, if the StartDate is in the past
+  - An h1 Title (the Event Title)
+  - Date @ Time - Date @ Time
+    - If no EndDate or if EndDate == StartDate, omit EndDate
+  - Details Section
+    - Configurable background colour
+    - Summary
+    - Venue
+    - Schedule
+    - Fees
+    - Registration info / link
+    - Social media link
+    - Payment information
+    - Meal / catering information
+    - Grading information
+    - Entertainment information
+    - Add-To-Calendar dropdown
+      - https://kendo.org.nz/event/national-naginata-seminar/
+  - Link back to Event Listing Page
+
+- Stories Page (Kudos / Testimonials)
+  - "Stories"
+
 - Contact Page
   - CTATitle
   - CTABody
   - ContactForm
   - LocationsTitle
+  - Google Map Block
 
 ## Blocks
 ### CTA Block (Full Width)
@@ -102,22 +135,28 @@ upload of svg files, which is why the path is hard-coded.
 
 ### Image Text Block
 > Used on: Content Page
-- Image [Optional]
-- Video
-- MediaPlacement (L / R)
 - Title
 - SubTitle
+- Background Colour (White, Light Grey, Dark Grey, Red)
+- Image1 (image or video)
+- Image1Caption [Optional]
+- Image2 [Optional]
+- Image2 Subtitle [Optional]
+- Video
+- MediaPlacement (L / R)
 - Content
 
 
 # To Do
 - Home Page
-  - Header: mobile nav focus trap
   - Random quotes
-  - Block text font and line spacing
-  - `Friends` Block ("Partners", "Associates", "Buyu")
-- Events block
-- Add phpunit
+  ? `Friends` Block ("Partners", "Associates", "Buyu")
+- Events Listing Page
+- Event Page
+- Kudos Page
+- Contact Page
+  - ReCaptcha / form protection
+- phpunit
 - Blog
   - Investigate comment approval mechanism
 - Silvershop?

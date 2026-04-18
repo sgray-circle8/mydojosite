@@ -54,7 +54,13 @@ class ImageBlock extends BaseElement
                     'Columns',
                     $this->dbObject('Size')->enumValues(),
                 ),
-                UploadField::create('BlockImage', 'Image'),
+                UploadField::create(
+                    'BlockImage',
+                    'Image'
+                )->setDescription('Recommended dimensions:<br />
+                    Height: 390px<br />
+                    Width:<br/>&nbsp;1 column: 400px<br/>&nbsp;2 columns: 800px
+                    '),
             ]
         );
 
