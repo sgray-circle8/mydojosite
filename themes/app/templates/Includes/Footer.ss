@@ -21,7 +21,6 @@
 	<div class="container">
 		<div class="footer-links-area">
 
-			<!-- Contacts -->
 			<div class="contact-block">
 				<h2>Contacts</h2>
 				<ul>
@@ -40,7 +39,6 @@
 				</ul>
 			</div>
 
-			<!-- Site Map -->
 			<div class="sitemap-block">
 				<h2>Site Map</h2>
 				<div class="sitemap-columns">

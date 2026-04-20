@@ -2,13 +2,6 @@
 
 namespace App\DataObjects\Events;
 
-use App\DataObjects\Events\Event;
-use App\DataObjects\Events\EventLocation;
-use App\DataObjects\Events\EventParticipant;
-use App\DataObjects\Events\EventRegistration;
-use App\DataObjects\Events\EventType;
-use App\DataObjects\Events\EventVendorService;
-use App\DataObjects\Events\EventParticipantDojo;
 use SilverStripe\Admin\ModelAdmin;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\Form;
@@ -45,8 +38,6 @@ class EventAdmin extends ModelAdmin
             $summaryFields = [
                 'Title' => 'Title',
                 'StartDate' => 'Date',
-                'NumberRegistrations' => 'Registered',
-                'TotalRegistrationPmtReceived' => 'Reg In',
             ];
 
             $modelGridField = GridField::create(
@@ -91,32 +82,6 @@ class EventAdmin extends ModelAdmin
                 'EventParticipantDojo',
                 'Dojo',
                 EventParticipantDojo::get(),
-                $modelGridFieldConfig
-            );
-        } elseif ($this->modelClass === EventParticipant::class) {
-            $summaryFields = [
-                'GivenName' => 'Name',
-                'FamilyName' => 'LName',
-            ];
-
-            $modelGridField = GridField::create(
-                'EventParticipant',
-                'Participant',
-                EventParticipant::get(),
-                $modelGridFieldConfig
-            );
-        } elseif ($this->modelClass === EventRegistration::class) {
-            $summaryFields = [
-                'EventTitle' => 'Title',
-                'EventParticipantFullName' => 'Name',
-                'PaymentDate' => 'Date',
-                'RegistrationFormattedPaymentAmount' => 'Paid',
-            ];
-
-            $modelGridField = GridField::create(
-                'EventRegistration',
-                'Registration',
-                EventRegistration::get(),
                 $modelGridFieldConfig
             );
         } elseif ($this->modelClass === EventType::class) {

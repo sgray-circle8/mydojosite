@@ -4,6 +4,12 @@
   flex-direction: column;
   gap: 12px;
 
+  &-cta {
+    max-width: 19rem;
+    display: inline-block;
+    margin-left: 0;
+  }
+
   &-cta:hover {
     opacity: 0.8;
   }
@@ -25,14 +31,29 @@
   }
 
   &-text {
-    padding-right: 1.5rem;
+    line-height: 1.4;
+    width: 100%;
 
     h1 {
       margin-top: 0;
     }
 
-    @media (min-width: 768px) {
-      flex: 1;
+    &__summary {
+      margin-bottom: 1rem;
+      display: inline-block;
+
+      &--wrapper {
+        display: block;
+
+        @media (min-width: 992px) {
+          display: flex;
+        }
+      }
+
+      @media (min-width: 992px) {
+        max-width: 65%;
+        margin-right: 1rem;
+      }
     }
   }
 }

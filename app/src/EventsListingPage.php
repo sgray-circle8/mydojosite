@@ -4,7 +4,6 @@
 namespace {
 
     use App\DataObjects\Events\Event;
-    use SilverStripe\Model\List\PaginatedList;
     use SilverStripe\ORM\DataList;
 
     class EventsListingPage extends Page

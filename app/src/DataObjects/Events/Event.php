@@ -38,10 +38,6 @@ class Event extends DataObject
         'EventListingPage' => EventsListingPage::class,
     ];
 
-    private static array $has_many = [
-        'Registrations' => EventRegistration::class,
-    ];
-
     private static array $many_many = [
         'Vendors' => EventVendor::class,
     ];
@@ -54,7 +50,6 @@ class Event extends DataObject
             'EventTypeID',
             'EventLocationID',
             'HostDojoID',
-            'Registrations',
             'Vendors',
             'Details',
             'RecentEventsBlockID',
@@ -111,30 +106,7 @@ class Event extends DataObject
         $dataColumns = $config->getComponentByType(GridFieldDataColumns::class);
         $dataColumns->setDisplayFields($summaryFields);
 
-        $fields->addFieldToTab(
-            'Root.Registrations',
-            GridField::create(
-                'Registrations',
-                'Event Registrations',
-                $this->Registrations(),
-                $config
-            )
-        );
-
         return $fields;
-    }
-
-    public function getNumberRegistrations(): int
-    {
-        return $this->Registrations()->count();
-    }
-
-    public function getTotalRegistrationPmtReceived(): string
-    {
-        $sumRegPmtRaw = $this->Registrations()->sum('PaymentAmount');
-        $sumRegPmtDecimals = number_format($sumRegPmtRaw, 2, '.', '');
-
-        return '$' . $sumRegPmtDecimals;
     }
 
     public function getEventLocationTitle(): ?string
