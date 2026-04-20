@@ -95,13 +95,6 @@ class Event extends DataObject
 
         $config = GridFieldConfig_RecordEditor::create();
 
-        $summaryFields = [
-            'EventParticipant.FullName' => 'Participant',
-            'PaymentDate' => 'Date Paid',
-            'PaymentAmount' => 'Amount',
-            'Memo' => 'Memo',
-        ];
-
         /** @var GridFieldDataColumns $dataColumns */
         $dataColumns = $config->getComponentByType(GridFieldDataColumns::class);
         $dataColumns->setDisplayFields($summaryFields);

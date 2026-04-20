@@ -19,8 +19,6 @@ class EventAdmin extends ModelAdmin
 
     private static array $managed_models = [
         Event::class,
-        EventRegistration::class,
-        EventParticipant::class,
         EventParticipantDojo::class,
         EventType::class,
         EventLocation::class,
