@@ -26,7 +26,7 @@
 				<ul>
 					<li>
 						<div class="icon"><i class="fa fa-envelope"></i></div>
-						<div class="text"><a href="mailto:$SiteConfig.ContactEmail">$SiteConfig.ContactEmail</a></div>
+						<div class="text"><a href="/contact/">bujinkan at graydojo.org</a></div>
 					</li>
 					<li>
 						<div class="icon"><i class="fa-brands fa-facebook"></i></div>

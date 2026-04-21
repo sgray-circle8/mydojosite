@@ -120,10 +120,9 @@ upload of svg files, which is why the path is hard-coded.
 
 # To Do
 - Home Page
-  - Random quotes
   ? `Friends` Block ("Partners", "Associates", "Buyu")
-- Contact Page
-  - ReCaptcha / form protection
+- Events pagination focus styling
+- Contact page focus styling
 - phpunit
 - Blog
   - Investigate comment approval mechanism

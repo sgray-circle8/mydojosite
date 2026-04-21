@@ -12,14 +12,33 @@
   }
 
   &__linked-page {
-    width: 100%;
     padding: 0.2rem;
     text-decoration: none;
     color: var(--accent);
+    display: inline-flex;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-left: 6px;
+      margin-top: 3px;
+      background-color: currentColor;
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l4-4-4-4m5 8l4-4-4-4'/%3E%3C/svg%3E");
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l4-4-4-4m5 8l4-4-4-4'/%3E%3C/svg%3E");
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      transition: transform 0.25s ease-out;
+    }
 
     &:hover {
       text-decoration: underline;
       text-underline-offset: 0.3rem;
+
+      &::after {
+        transform: translateX(4px);
+      }
     }
 
     &:focus {

@@ -2,8 +2,10 @@
 
 namespace App\Blocks;
 
+use App\DataObjects\Quote;
 use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Forms\CheckboxField;
 use Silverstripe\Forms\FieldList;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
@@ -29,6 +31,7 @@ class TextBlock extends BaseElement
         'BGColour' => 'Enum("Light Grey, Dark Grey, Red", "Light Grey")',
         'BlockSummary' => 'Text',
         'ButtonText' => 'Varchar(10)',
+        'UseRandomQuote' => 'Boolean',
     ];
 
     private static array $has_one = [
@@ -64,7 +67,28 @@ class TextBlock extends BaseElement
             ]
         );
 
+        $randomQuoteFieldset = CheckboxField::create(
+            'UseRandomQuote',
+            'Random Quote'
+        )->setDescription(
+            'If checked, a random quote will be used instead of the Summary.'
+        );
+
+        $fields->addFieldToTab('Root.Main', $randomQuoteFieldset)->insertBefore('ButtonText', $randomQuoteFieldset);
+
         return $fields;
+    }
+
+    public function RandomQuote(): array
+    {
+        $quote = Quote::get()->alterDataQuery(function($query) {
+            $query->sort('RAND()');
+        })->first();
+
+        return [
+            'QuoteText' => $quote->QuoteText,
+            'QuoteSource' => $quote->QuoteSource,
+            ];
     }
 
 }

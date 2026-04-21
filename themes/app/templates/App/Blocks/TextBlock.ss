@@ -10,7 +10,14 @@
     ">
       <h2>$Title</h2>
       <% if $SubTitle %><h4>$SubTitle</h4><% end_if %>
-      <p>$BlockSummary</p>
+      <p>
+          <% if $UseRandomQuote %>
+            <em>"$RandomQuote.QuoteText"</em><br />
+            -- $RandomQuote.QuoteSource
+          <% else %>
+              $BlockSummary
+          <% end_if %>
+      </p>
       <% if $ButtonText %>
           <div class="button">
           <a
