@@ -8,11 +8,11 @@ namespace {
 
     class EventsListingPage extends Page
     {
-        private static $db = [];
+        private static array $db = [];
 
-        private static $has_one = [];
+        private static array $has_one = [];
 
-        private static $has_many = [
+        private static array $has_many = [
             'Events' => Event::class
         ];
 

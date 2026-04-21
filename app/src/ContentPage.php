@@ -5,9 +5,9 @@ namespace {
 
     class ContentPage extends Page
     {
-        private static $db = [];
+        private static array $db = [];
 
-        private static $has_one = [];
+        private static array $has_one = [];
     }
 
 }

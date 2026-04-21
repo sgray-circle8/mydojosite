@@ -6,9 +6,9 @@ namespace {
 
     class Page extends SiteTree
     {
-        private static $db = [];
+        private static array $db = [];
 
-        private static $has_one = [];
+        private static array $has_one = [];
 
         public function getCMSFields()
         {

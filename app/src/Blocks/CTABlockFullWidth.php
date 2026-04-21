@@ -5,6 +5,7 @@ namespace App\Blocks;
 use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\CMS\Model\SiteTree;
 use Silverstripe\Forms\FieldList;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\TreeDropdownField;
@@ -25,7 +26,7 @@ class CTABlockFullWidth extends BaseElement
     private static string $icon = 'font-icon-attention-1';
 
     private static array $db = [
-        'CTASummary' => 'Text',
+        'CTASummary' => 'HTMLText',
         'CTAButtonText' => 'Varchar(60)',
         ];
 
@@ -45,7 +46,7 @@ class CTABlockFullWidth extends BaseElement
         $fields->addFieldsToTab(
             'Root.Main',
             [
-                TextareaField::create('CTASummary', 'Summary'),
+                HTMLEditorField::create('CTASummary', 'Summary'),
                 TextField::create('CTAButtonText', 'Button Text'),
                 TreeDropdownField::create(
                     'CTAButtonPageID',

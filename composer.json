@@ -17,6 +17,7 @@
         "silverstripe/htmleditor-tinymce": "1.0.2",
         "silverstripe/login-forms": "^6",
         "silverstripe/recipe-cms": "6.1",
+        "silverstripe/spamprotection": "^5.0",
         "silverstripe/userforms": "^7",
         "undefinedoffset/silverstripe-nocaptcha": "^3.1"
     },

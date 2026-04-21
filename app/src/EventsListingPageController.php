@@ -24,7 +24,7 @@ namespace {
          *
          * @var array
          */
-        private static $allowed_actions = [];
+        private static array $allowed_actions = [];
 
         protected function init()
         {
