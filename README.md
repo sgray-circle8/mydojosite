@@ -1,5 +1,9 @@
 # graydojo.org website
 
+## v3.0
+- Silverstripe CMS 6.1 upgrade
+- Responsive design refresh using scss / bem
+
 ## Breakpoints
 - 1200px  // Desktop
 - 992px   // Tablet Large
@@ -117,16 +121,16 @@ upload of svg files, which is why the path is hard-coded.
 - MediaPlacement (L / R)
 - Content
 
-
 # To Do
-- Home Page
-  ? `Friends` Block ("Partners", "Associates", "Buyu")
-- Events pagination focus styling
-- Contact page focus styling
-- phpunit
+- About Page: New images
+- Training Page: Video Block (Would be great to have mini video players for the event listings as well)
+- Tests: phpunit, cypress
 - Blog
   - Investigate comment approval mechanism
-- Silvershop?
+- Contact: Email template
+- Markdown documentation including screenshots
+? Home Page - `Friends` Block ("Partners", "Associates", "Buyu")
+? Silvershop
 
 ## To Do: Event Page
   - Link back to Event Listing Page

@@ -42,5 +42,11 @@
       text-decoration: none;
       font-style: italic;
     }
+
+    &:focus {
+      text-decoration: none;
+      outline-color: var(--accent);
+      outline-offset: 0.2rem;
+    }
   }
 }

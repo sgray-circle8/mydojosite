@@ -97,7 +97,7 @@ class Event extends DataObject
 
         /** @var GridFieldDataColumns $dataColumns */
         $dataColumns = $config->getComponentByType(GridFieldDataColumns::class);
-        $dataColumns->setDisplayFields($summaryFields);
+//        $dataColumns->setDisplayFields($summaryFields);
 
         return $fields;
     }

@@ -44,6 +44,7 @@
     &:focus {
       outline: 2px solid var(--accent);
       outline-offset: 0.3rem;
+      border-radius: 5px;
     }
 
     @media (min-width:768px) {
@@ -75,21 +76,22 @@
     color: var(--accent);
     text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
-      text-underline-offset: 0.3rem;
-
-      img {
-        outline: 2px solid var(--accent);
-        outline-offset: 0.2rem;
-      }
-    }
-
-    &:focus {
-      outline: 2px solid var(--accent);
-      outline-offset: 0.3rem;
-      border-radius: 0.2rem;
-    }
+    /* To do: implement this when doing the Event Page */
+    //&:hover {
+    //  text-decoration: underline;
+    //  text-underline-offset: 0.3rem;
+    //
+    //  img {
+    //    outline: 2px solid var(--accent);
+    //    outline-offset: 0.2rem;
+    //  }
+    //}
+    //
+    //&:focus {
+    //  outline: 2px solid var(--accent);
+    //  outline-offset: 0.3rem;
+    //  border-radius: 0.2rem;
+    //}
   }
 
   &__image {

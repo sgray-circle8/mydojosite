@@ -65,11 +65,30 @@ class RecentEventsBlock extends BaseElement
         return $fields;
     }
 
+    /**
+     * Get the 4 most recent Events
+     *
+     * @return DataList
+     */
     public function RecentEvents(): DataList
     {
         return Event::get()
             ->sort('StartDate', 'DESC')
             ->limit(4);
+    }
+
+    /**
+     * Get the URL of the Event Listing Page
+     * which is associated with this Block in the CMS
+     *
+     * @return string
+     */
+    public function LinkedPageURL(): string
+    {
+        $pageID = $this->LinkedPageID;
+        $page = SiteTree::get()->byID($pageID);
+
+        return $page->URLSegment;
     }
 
 }

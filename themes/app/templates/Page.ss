@@ -9,13 +9,12 @@
 	$MetaTags(false)
 
 	<% require themedCSS("dist/css/app") %>
-<%--	<% require themedCSS("dist/css/form") %>--%>
 
-    <link rel="icon" type="image/png" href="/assets/images/logos/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/assets/images/logos/favicon.svg" />
-    <link rel="shortcut icon" href="/assets/images/logos/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/logos/apple-touch-icon.png" />
-    <link rel="manifest" href="/assets/images/logos/site.webmanifest" />
+	<link rel="icon" type="image/png" href="/_resources/themes/app/dist/img/favicon/favicon-96x96.png?v=20260422" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="/_resources/themes/app/dist/img/favicon/favicon.svg?v=20260422" />
+	<link rel="shortcut icon" href="/_resources/themes/app/dist/img/favicon/favicon.ico?v=20260422" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/_resources/themes/app/dist/img/favicon/apple-touch-icon.png?v=20260422" />
+	<link rel="manifest" href="/_resources/themes/app/dist/img/favicon/site.webmanifest?v=20260422" />
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
