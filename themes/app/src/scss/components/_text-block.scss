@@ -19,6 +19,8 @@
     }
 
     .button {
+      border-radius: 5px;
+
       &:focus-within {
         outline: 2px solid black;
         outline-offset: 2px;

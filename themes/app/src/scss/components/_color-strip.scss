@@ -38,11 +38,9 @@
   transition: background 0.3s;
   text-decoration: none;
 
-  &:hover {
-    background: rgb(255 255 255 / 40%);
-  }
-
+  &:hover,
   &:focus {
+    background: rgb(255 255 255 / 40%);
     outline: 2px solid white;
     outline-offset: 2px;
   }

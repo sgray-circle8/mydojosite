@@ -47,7 +47,6 @@ class TextImageBlock extends BaseElement
     {
         $fields = parent::getCMSFields();
         $fields->removeByName([
-            'BlockText',
             'Image1ID',
             'Image2ID',
         ]);

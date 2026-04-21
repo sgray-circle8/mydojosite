@@ -49,6 +49,13 @@
             text-decoration: none;
             font-style: italic;
           }
+
+          &:focus {
+            outline: 0.15rem solid var(--accent);
+            outline-offset: 0.2rem;
+            border-radius: 0.2rem;
+            text-decoration: none;
+          }
         }
       }
 
@@ -66,6 +73,18 @@
 
     /* stylelint-disable-next-line selector-id-pattern */
     #Form_Form {
+      &_Name,
+      &_Email,
+      &_Message {
+        &:active,
+        &:focus,
+        &:focus-visible,
+        &:hover {
+          outline: 0.15rem solid var(--accent);
+          outline-offset: 0.2rem;
+        }
+      }
+
       &_Name_Holder, &_Email_Holder {
         width: 100%;
 
@@ -159,4 +178,18 @@
     width: 50%;
   }
 
+}
+
+.rc-anchor-pt {
+  a {
+    &:focus {
+      outline: 1px solid black;
+      outline-offset: 0.2rem;
+      border-radius: 2px;
+    }
+  }
+}
+
+.rc-anchor-content {
+  margin-top: 1rem;
 }

@@ -1,8 +1,10 @@
 <header class="card site-header" role="banner">
 	<div class="brand">
+		<div class="site-header__logo">
 		<a href="/">
 			<img src="/_resources/themes/app/dist/img/DragonEnsoRyuUn.svg" class="logo" alt="Site Logo">
 		</a>
+		</div>
 		<span class="site-title">$SiteConfig.Title</span>
 	</div>
 
