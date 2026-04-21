@@ -14,7 +14,7 @@
                                 <li>Ask any questions or just to get in touch</li>
                             </ul>
                         </div>
-                        $ShowForm
+                        $Form
                     </div>
                     <div class="col-lg-5 col-md-5">
                         <div class="postal-address">

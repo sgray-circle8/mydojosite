@@ -34,7 +34,7 @@
 					</li>
 					<li>
 						<div class="icon"><i class="fa fa-map-marker"></i></div>
-						<div class="text">$SiteConfig.ContactAddress</div>
+						<div class="text">$SiteConfig.DojoAddress</div>
 					</li>
 				</ul>
 			</div>
