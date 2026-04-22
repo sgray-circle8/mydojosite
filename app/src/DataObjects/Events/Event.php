@@ -3,12 +3,12 @@
 namespace App\DataObjects\Events;
 
 use App\Blocks\RecentEventsBlock;
+use App\PageTypes\EventsListingPage;
 use DateTime;
-use EventsListingPage;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\GridField\GridField;
+//use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\GridField\GridFieldDataColumns;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
@@ -78,7 +78,7 @@ class Event extends DataObject
             'Root.Main',
             DropdownField::create(
                 'HostDojoID',
-                'Host Dojo',
+                'Event Host',
                 EventParticipantDojo::get()->map('ID', 'DojoName')
             )->setEmptyString('')
         );

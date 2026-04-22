@@ -1,13 +1,13 @@
 <?php
 
-use SilverStripe\CMS\Model\SiteTree;
+namespace App\PageTypes;
 
-class Page extends SiteTree
+use Page;
+
+class HomePage extends Page
 {
 
-    private static array $db = [];
-
-    private static array $has_one = [];
+    private static string $table_name = 'HomePage';
 
     public function getCMSFields()
     {
@@ -18,5 +18,5 @@ class Page extends SiteTree
 
         return $fields;
     }
-}
 
+}

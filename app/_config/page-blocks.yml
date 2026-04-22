@@ -1,10 +1,10 @@
 ---
 Name: pages
 ---
-HomePage:
+App\PageTypes\HomePage:
   disallowed_elements:
     - DNADesign\Elemental\Models\ElementContent
-ContentPage:
+App\PageTypes\ContentPage:
   allowed_elements:
     - App\Blocks\TextImageBlock
   disallowed_elements:
