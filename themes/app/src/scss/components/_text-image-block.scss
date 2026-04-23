@@ -106,7 +106,7 @@
     &-wrapper {
       grid-area: images;
       display: flex;
-      flex-direction: row;
+      flex-flow: row wrap;
       gap: 1rem;
       margin: 1rem 0;
       width: 100%;
@@ -122,7 +122,6 @@
 
     &-unit {
       flex: 0 0 auto;
-      width: 50%;
 
       @media (min-width: 768px) {
         width: 100%;

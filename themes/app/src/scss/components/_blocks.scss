@@ -1,4 +1,27 @@
 .blocks-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr); // Desktop: 3 equal columns
+    gap: 0;
+  }
+}
+
+.text-block,
+.image-block {
+  flex: none;
+  width: 100%;
+  max-width: none;
+}
+
+@media (min-width: 768px) {
+  .image-block--two-column {
+    grid-column: span 2;
+  }
+
+  .image-block--one-column,
+  .text-block {
+    grid-column: span 1;
+  }
 }
