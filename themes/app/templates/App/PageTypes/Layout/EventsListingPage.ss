@@ -63,16 +63,17 @@
                 <% end_if %>
 
               <% if $IsPast %>
-                  <br />*Note that this event has already taken place.
+                  <br />*This event has already taken place.
               <% end_if %>
             </div>
         <% end_if %>
 
         <div class="text-image-block__text-title<% if $IsPast %> text-image-block__text-title--past-event<% end_if %>">$Title</div>
-        <% if $EventLocationTitle || $EventHostDojo || $FacebookURL %>
+        <% if $EventLocationTitle || $EventHostName || $FacebookURL %>
         <div class="text-image-block__text-location">
-          <% if $EventLocationTitle %>
             <div class="icon event__bullets">
+
+            <% if $EventLocationTitle %>
               <div class="event__bullet event__location-title">
               <i class="fa fa-map-marker"></i>
                 $EventLocationTitle
@@ -80,20 +81,38 @@
                   ( $EventLocationAddress )
                 <% end_if %>
               </div>
-              <% if $EventHostDojo %>
-                <div class="event__bullet event__host-dojo">
-                  <i class="fa-solid fa-house-chimney-user"></i> Hosted by $EventHostDojo
-                </div>
-              <% end_if %>
-              <% if $FacebookURL %>
-                <div class="event__bullet">
-                  <i class="fa-brands fa-square-facebook"></i> <a href="$FacebookURL" target="_blank">View this event on Facebook</a>
-                </div>
-              <% end_if %>
+            <% end_if %>
+
+            <% if $EventEventHost %>
+            <div class="event__bullet event__host-dojo">
+              <i class="fa-solid fa-house-chimney-user"></i>
+              Hosted by
+              <% if $EventHostURL %><a href="{$EventHostURL}" target="_blank"><% end_if %>
+              $EventEventHost
+              <% if $EventHostURL %></a><% end_if %>
             </div>
-          <% end_if %>
+            <% end_if %>
+
+            <% if $FacebookURL %>
+            <div class="event__bullet">
+              <i class="fa-brands fa-square-facebook"></i> <a href="$FacebookURL" target="_blank">View on Facebook</a>
+            </div>
+            <% end_if %>
+
+            <%-- Registration link for future events only --%>
+            <% if not $IsPast %>
+                <% if $EventRegistrationLink %>
+                  <div class="event__bullet event__registration-link">
+                    <i class="fa fa-sign-in"></i>
+                      $EventRegistrationLink
+                  </div>
+                <% end_if %>
+            <% end_if %>
+
+            </div>
         </div>
         <% end_if %>
+
         <div class="text-image-block__text-content">$Details</div>
 
         <% if $EventImage %>

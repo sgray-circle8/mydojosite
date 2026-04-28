@@ -13,9 +13,12 @@
 ">
   <div class="text-image-block__wrapper">
     <div class="text-image-block__text-wrapper">
-      <div class="text-image-block__text-title">$Title</div>
-      <div class="text-image-block__text-subtitle">$SubTitle</div>
-
+      <% if $ShowTitle %>
+        <div class="text-image-block__text-title">$Title</div>
+      <% end_if %>
+      <% if $SubTitle %>
+        <div class="text-image-block__text-subtitle">$SubTitle</div>
+      <% end_if %>
       <div class="text-image-block__image-wrapper">
         <div class="text-image-block__image-unit">
           <div class="text-image-block__image-img">

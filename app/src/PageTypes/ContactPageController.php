@@ -10,6 +10,7 @@ use SilverStripe\Forms\FormAction;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\CMS\Controllers\ContentController;
+use SilverStripe\SiteConfig\SiteConfig;
 
 class ContactPageController extends ContentController
 {
@@ -40,12 +41,9 @@ class ContactPageController extends ContentController
     public function submit($data, $form)
     {
         $email = Email::create();
-        $email->setTo('bujinkan@graydojo.org');
-
-        // Best practice: Use a system email and set the user as Reply-To
-        $email->setFrom('bujinkan@graydojo.org');
+        $email->setTo(SiteConfig::current_site_config()->ContactEmail);
+        $email->setFrom(SiteConfig::current_site_config()->ContactEmail);
         $email->setReplyTo($data['Email']);
-
         $email->setSubject("Contact Message from {$data['Name']}");
 
         $messageBody = "

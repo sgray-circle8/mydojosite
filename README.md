@@ -122,6 +122,8 @@ upload of svg files, which is why the path is hard-coded.
 - Content
 
 # To Do
+- HomePage: RecentEvents: Past events: Mute title and add textual indicator / icon
+- HomePage: RecentEvents: Link to registration details / contact
 - About Page: New images
 - Training Page: Video Block (Would be great to have mini video players for the event listings as well)
 - Tests: phpunit, cypress
@@ -129,8 +131,8 @@ upload of svg files, which is why the path is hard-coded.
   - Investigate comment approval mechanism
 - Contact: Email template
 - Markdown documentation including screenshots
-? Home Page - `Friends` Block ("Partners", "Associates", "Buyu")
-? Silvershop
+- Home Page - `Friends` Block ("Partners", "Associates", "Buyu")
+- Silvershop integration
 
 ## To Do: Event Page
   - Link back to Event Listing Page

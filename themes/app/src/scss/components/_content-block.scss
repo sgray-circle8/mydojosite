@@ -1,0 +1,48 @@
+.content {
+  &-element {
+    &__content {
+      padding: 0 2rem 2rem;
+
+      &-table {
+        &--indented {
+          padding-left: 2rem;
+        }
+      }
+
+      p {
+        margin: 1.2rem 0;
+        line-height: 1.6;
+      }
+
+      table {
+        margin-left: 0 !important;
+        height: auto !important;
+
+        tr, td {
+          height: auto !important; // Override 141px / 70px heights
+          padding: 0 !important;   // Override inline padding-left: 40px
+          vertical-align: top;
+        }
+
+        tbody {
+          padding-left: 0 !important;
+
+          tr > td > p {
+            padding-left: 0 !important;
+            margin: 0 !important; // Override paragraph margins in tables
+          }
+        }
+      }
+    }
+  }
+}
+
+#content-table {
+  &--indented {
+    padding-left: 2.5rem !important;
+
+    tr > td {
+      padding: 0.5rem !important;
+    }
+  }
+}

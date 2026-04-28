@@ -8,16 +8,21 @@ use DateTime;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\FieldList;
-//use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\GridField\GridFieldDataColumns;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\TextField;
+use SilverStripe\LinkField\Form\LinkField;
+use SilverStripe\LinkField\Models\Link;
 use SilverStripe\ORM\DataObject;
 
 class Event extends DataObject
 {
     private static string $table_name = 'Event';
+
+    private static string $singular_name = 'Event';
+
+    private static string $plural_name = 'Events';
 
     private static array $db = [
         'Title' => 'Varchar',
@@ -33,13 +38,24 @@ class Event extends DataObject
         'EventImage' => Image::class,
         'EventType' => EventType::class,
         'EventLocation' => EventLocation::class,
-        'HostDojo' => EventParticipantDojo::class,
+        'EventHost' => EventHost::class,
         'RecentEventsBlock' => RecentEventsBlock::class,
         'EventListingPage' => EventsListingPage::class,
+        'EventRegistrationLink' => Link::class
     ];
 
     private static array $many_many = [
         'Vendors' => EventVendor::class,
+    ];
+
+    private static array $owns = [
+        'EventRegistrationLink',
+    ];
+
+    private static array $summaryFields = [
+        'Title' => 'Title',
+        'EventLocation' => 'Location',
+        'StartDate' => 'Date',
     ];
 
     public function getCMSFields(): FieldList
@@ -49,11 +65,12 @@ class Event extends DataObject
         $fields->removeByName([
             'EventTypeID',
             'EventLocationID',
-            'HostDojoID',
+            'EventHostID',
             'Vendors',
             'Details',
             'RecentEventsBlockID',
             'EventListingPageID',
+            'EventRegistrationLinkID',
         ]);
 
         $fields->addFieldToTab(
@@ -77,9 +94,9 @@ class Event extends DataObject
         $fields->addFieldToTab(
             'Root.Main',
             DropdownField::create(
-                'HostDojoID',
+                'EventHostID',
                 'Event Host',
-                EventParticipantDojo::get()->map('ID', 'DojoName')
+                EventHost::get()->map('ID', 'EventHostName')
             )->setEmptyString('')
         );
 
@@ -90,14 +107,20 @@ class Event extends DataObject
 
         $fields->addFieldToTab(
             'Root.Main',
+            LinkField::create(
+                'EventRegistrationLinkID',
+                'Registration Link',
+            ),
+        );
+
+        $fields->addFieldToTab(
+            'Root.Main',
             HTMLEditorField::create('Details', 'Details')
         );
 
         $config = GridFieldConfig_RecordEditor::create();
-
-        /** @var GridFieldDataColumns $dataColumns */
         $dataColumns = $config->getComponentByType(GridFieldDataColumns::class);
-//        $dataColumns->setDisplayFields($summaryFields);
+        $dataColumns->setDisplayFields($this->summaryFields());
 
         return $fields;
     }
@@ -112,9 +135,14 @@ class Event extends DataObject
         return $this->EventLocation()->Address;
     }
 
-    public function EventHostDojo(): ?string
+    public function EventEventHost(): ?string
     {
-        return $this->HostDojo()->DojoName;
+        return $this->EventHost()->EventHostName;
+    }
+
+    public function EventHostURL(): ?string
+    {
+        return $this->EventHost()->EventHostURL;
     }
 
     public function IsPast(): bool

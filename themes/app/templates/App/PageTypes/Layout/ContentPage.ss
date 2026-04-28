@@ -1,3 +1,3 @@
-<% loop $ElementalArea.Elements.Filter('ClassName', 'App\Blocks\TextImageBlock') %>
+<% loop $ElementalArea.Elements %>
     $Me
 <% end_loop %>

@@ -9,6 +9,10 @@
   --max-width: 1200px;
   --font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 
+  * {
+    box-sizing: border-box;
+  }
+
   @media (min-width: 768px) {
     --gap: 18px;
     --pad: 18px

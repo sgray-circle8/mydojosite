@@ -4,12 +4,17 @@
     padding: 0 20px 20px;
     display: flex;
     flex-wrap: wrap;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 }
 
 .testimonial {
-  max-width: 50%;
+  max-width: 100%;
+  width: 100%;
   padding: 1rem;
+  box-sizing: border-box;
 
   &-quotemark {
     height: 3.1rem;
@@ -20,7 +25,9 @@
     padding: 0.6rem;
     z-index: 100;
     background-color: var(--accent);
-    filter: drop-shadow(2px 2px 1px var(--muted));  }
+    filter: drop-shadow(2px 2px 1px var(--muted));
+    margin-left: 0.6rem;
+  }
 
   &-text {
     background-color: var(--bg);
@@ -46,5 +53,9 @@
   &-location {
     color: var(--muted);
     font-size: 0.8rem;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 50%;
   }
 }

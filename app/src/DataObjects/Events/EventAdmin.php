@@ -19,11 +19,17 @@ class EventAdmin extends ModelAdmin
 
     private static array $managed_models = [
         Event::class,
-        EventParticipantDojo::class,
+        EventHost::class,
         EventType::class,
         EventLocation::class,
         EventVendor::class,
         EventVendorService::class,
+    ];
+
+    private static array $summaryFields = [
+        'Title' => 'Title',
+        'EventLocation' => 'EventLocation',
+        'StartDate' => 'Date',
     ];
 
     public function getEditForm($id = null, $fields = null): Form
@@ -70,16 +76,16 @@ class EventAdmin extends ModelAdmin
                 EventVendor::get(),
                 $modelGridFieldConfig
             );
-        } elseif ($this->modelClass === EventParticipantDojo::class) {
+        } elseif ($this->modelClass === EventHost::class) {
             $summaryFields = [
-                'DojoName' => 'Name',
-                'DojoLocation' => 'Location',
+                'EventHostName' => 'Name',
+                'EventLocation' => 'Location',
             ];
 
             $modelGridField = GridField::create(
-                'EventParticipantDojo',
-                'Dojo',
-                EventParticipantDojo::get(),
+                'EventHost',
+                'Host',
+                EventHost::get(),
                 $modelGridFieldConfig
             );
         } elseif ($this->modelClass === EventType::class) {
