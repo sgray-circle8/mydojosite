@@ -21,8 +21,18 @@ jobs:
           server-dir: /public_html/
           local-dir: ./ # Upload all project files
           exclude: |
-            **/.git*
-            **/node_modules/*
-            **/.ddev/*
-            **/public/_resources/*
+            .git*
+            node_modules/
+            .ddev/
+            public/_resources/
             .github/
+            composer.json
+            composer.lock
+            package.json
+            yarn.lock
+            tsconfig.json
+            webpack.mix.js
+            .eslint*
+            .stylelintrc.json
+            .nvmrc
+            README.md
