@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - production
+
 jobs:
   web-deploy:
     name: 🎉 Deploy
@@ -12,6 +13,21 @@ jobs:
       - name: 🚚 Check out latest code
         uses: actions/checkout@v4.2.0
 
+      - name: ⚙️ Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2' # Match your server's PHP version
+          tools: composer
+
+      - name: 📦 Install Composer dependencies
+        run: composer install --no-dev --optimize-autoloader
+
+      - name: 🏗️ Expose assets
+        run: |
+          export SS_VENDOR_METHOD=copy
+          # This generates the files in public/_resources/
+          vendor/bin/sake vendor-expose
+
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -19,14 +35,13 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /public_html/
-          local-dir: ./ # Upload all project files
+          local-dir: ./
           exclude: |
             **/.git*
             **/.git*/**
             **/node_modules/**
             **/.DS_Store
             .ddev/
-            public/_resources/
             .github/
             composer.json
             composer.lock
