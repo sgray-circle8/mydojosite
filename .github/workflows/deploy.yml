@@ -21,8 +21,10 @@ jobs:
           server-dir: /public_html/
           local-dir: ./ # Upload all project files
           exclude: |
-            .git*
-            node_modules/
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.DS_Store
             .ddev/
             public/_resources/
             .github/
