@@ -25,8 +25,8 @@ jobs:
       - name: 🏗️ Expose assets
         run: |
           export SS_VENDOR_METHOD=copy
-          # This generates the files in public/_resources/
-          vendor/bin/sake vendor-expose
+          # Use vendor-expose directly rather than through 'sake'
+          ./vendor/bin/vendor-expose
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
