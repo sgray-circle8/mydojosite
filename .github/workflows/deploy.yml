@@ -44,6 +44,8 @@ jobs:
             .ddev/
             .github/
             vendor/
+            vendor/**
+            public/_resources/vendor/
             composer.json
             composer.lock
             package.json
