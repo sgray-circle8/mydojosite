@@ -43,6 +43,7 @@ jobs:
             **/.DS_Store
             .ddev/
             .github/
+            vendor/
             composer.json
             composer.lock
             package.json
