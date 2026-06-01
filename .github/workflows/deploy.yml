@@ -25,8 +25,8 @@ jobs:
       - name: 🏗️ Expose assets
         run: |
           export SS_VENDOR_METHOD=copy
-          # Use vendor-expose directly rather than through 'sake'
-          ./vendor/bin/vendor-expose
+          # Execute the plugin via composer
+          composer vendor-expose
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
