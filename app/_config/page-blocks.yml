@@ -7,6 +7,7 @@ App\PageTypes\HomePage:
 App\PageTypes\ContentPage:
   allowed_elements:
     - App\Blocks\TextImageBlock
+    - App\Blocks\VideoTextBlock
     - DNADesign\Elemental\Models\ElementContent
   disallowed_elements:
     - App\Blocks\CTABlockFullWidth

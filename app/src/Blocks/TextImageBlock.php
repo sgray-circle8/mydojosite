@@ -22,7 +22,7 @@ class TextImageBlock extends BaseElement
 
     private static bool $inline_editable = false;
 
-    private static string $icon = 'font-icon-block-story';
+    private static string $icon = 'font-icon-block-file';
 
     private static array $db = [
         'SubTitle' => 'Varchar',
