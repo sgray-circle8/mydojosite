@@ -13,4 +13,15 @@ class Testimonial extends DataObject
         'Location' => 'Varchar(50)',
         'Testimonial' => 'Text',
     ];
+
+    private static array $summary_fields = [
+        'Name' => 'Name',
+        'Location' => 'Location',
+        'ShortTestimonial' => 'What they said',
+    ];
+
+    public function getShortTestimonial(): string
+    {
+        return $this->dbObject('Testimonial')->LimitCharacters(125);
+    }
 }
