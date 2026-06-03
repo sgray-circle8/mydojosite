@@ -25,6 +25,7 @@ class EventLocation extends DataObject
 
     private static array $summary_fields = [
         'Title' => 'Title',
+        'Address' => 'Address',
     ];
 
     public function getCMSFields(): FieldList

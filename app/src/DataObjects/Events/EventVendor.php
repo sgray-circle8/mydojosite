@@ -31,6 +31,14 @@ class EventVendor extends DataObject
         'Events' => Event::class,
     ];
 
+    private static array $summary_fields = [
+        'VendorName' => 'Vendor Name',
+        'VendorContactName' => 'Contact',
+        'VendorServiceName' => 'Provides',
+        'VendorContactPhone' => 'Tel',
+        'VendorContactEmail' => 'Email',
+    ];
+
     public function getCMSFields(): FieldList
     {
         $fields = parent::getCMSFields();

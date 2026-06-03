@@ -52,7 +52,7 @@ class Event extends DataObject
         'EventRegistrationLink',
     ];
 
-    private static array $summaryFields = [
+    private static array $summary_fields = [
         'EventImage.CMSThumbnail' => 'Image',
         'Title' => 'Title',
         'EventLocation.Title' => 'Location',

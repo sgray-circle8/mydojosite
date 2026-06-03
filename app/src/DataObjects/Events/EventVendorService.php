@@ -15,4 +15,8 @@ class EventVendorService extends DataObject
         'ServiceName' => 'Varchar',
     ];
 
+    private static array $summary_fields = [
+        'ServiceName' => 'Service Name',
+    ];
+
 }

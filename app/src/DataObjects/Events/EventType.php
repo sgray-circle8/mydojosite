@@ -12,4 +12,8 @@ class EventType extends DataObject
     private static array $db = [
         'EventTypeName' => "Varchar(50)",
     ];
+
+    private static array $summary_fields = [
+        'EventTypeName' => 'Type',
+    ];
 }

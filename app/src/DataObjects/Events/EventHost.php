@@ -16,4 +16,9 @@ class EventHost extends DataObject
         'EventLocation' => 'Varchar',
         'EventHostURL' => 'Varchar',
     ];
+
+    private static array $summary_fields = [
+        'EventHostName' => 'Name',
+        'EventLocation' => 'Location',
+    ];
 }
