@@ -12,4 +12,14 @@ class Quote extends DataObject
         'QuoteText' => 'Text',
         'QuoteSource' => 'Varchar',
     ];
+
+    private static array $summary_fields = [
+        'ShortQuote' => 'Quote',
+        'QuoteSource' => 'Source',
+    ];
+
+    public function getShortQuote(): string
+    {
+        return $this->dbObject('QuoteText')->LimitCharacters(125);
+    }
 }
