@@ -119,10 +119,6 @@ class Event extends DataObject
             HTMLEditorField::create('Details', 'Details')
         );
 
-        $config = GridFieldConfig_RecordEditor::create();
-        $dataColumns = $config->getComponentByType(GridFieldDataColumns::class);
-        $dataColumns->setDisplayFields($this->summaryFields());
-
         return $fields;
     }
 
