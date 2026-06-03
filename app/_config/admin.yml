@@ -4,3 +4,9 @@ name: app-admin
 SilverStripe\Forms\HTMLEditor\TinyMCEConfig:
   editor_css:
     - 'themes/app/dist/editor.css'
+
+SilverStripe\Admin\LeftAndMain:
+  extra_requirements_css:
+    - "jonom/silverstripe-text-target-length:client/css/text-target-length.css"
+  extra_requirements_javascript:
+    - "jonom/silverstripe-text-target-length:client/javascript/text-target-length.js"

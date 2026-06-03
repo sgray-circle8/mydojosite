@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "09397f8b77b9f90faeb83ce927065bd1",
+    "content-hash": "f91b044219c0f4ab1c0215eb6aba7864",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1210,6 +1210,67 @@
                 }
             ],
             "time": "2025-12-17T13:38:29+00:00"
+        },
+        {
+            "name": "jonom/silverstripe-text-target-length",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jonom/silverstripe-text-target-length.git",
+                "reference": "c3beaf821b701f2edef10437f20bca23c1d462e2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jonom/silverstripe-text-target-length/zipball/c3beaf821b701f2edef10437f20bca23c1d462e2",
+                "reference": "c3beaf821b701f2edef10437f20bca23c1d462e2",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "^4.0 || ^5.0 || ^6.0"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "client"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "JonoM\\SilverStripeTextTargetLength\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathon Menz",
+                    "homepage": "http://jonathonmenz.com"
+                }
+            ],
+            "description": "Set character length recommendations on SilverStripe text form fields",
+            "keywords": [
+                "silverstripe",
+                "target",
+                "textareafield",
+                "textfield"
+            ],
+            "support": {
+                "issues": "https://github.com/jonom/silverstripe-text-target-length/issues",
+                "source": "https://github.com/jonom/silverstripe-text-target-length/tree/2.0.4"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/jmnz",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/jonom",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-07-07T21:02:49+00:00"
         },
         {
             "name": "league/csv",
@@ -9123,12 +9184,12 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.3"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
 }

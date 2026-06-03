@@ -13,6 +13,7 @@
     "require": {
         "php": "^8.3",
         "dnadesign/silverstripe-elemental": "^6",
+        "jonom/silverstripe-text-target-length": "^2.0",
         "silverstripe/blog": "^5",
         "silverstripe/htmleditor-tinymce": "1.0.2",
         "silverstripe/linkfield": "^5.2",

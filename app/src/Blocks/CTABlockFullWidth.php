@@ -6,7 +6,6 @@ use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\CMS\Model\SiteTree;
 use Silverstripe\Forms\FieldList;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
-use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\TreeDropdownField;
 
@@ -47,7 +46,10 @@ class CTABlockFullWidth extends BaseElement
             'Root.Main',
             [
                 HTMLEditorField::create('CTASummary', 'Summary'),
-                TextField::create('CTAButtonText', 'Button Text'),
+                TextField::create(
+                    'CTAButtonText',
+                    'Button Text'
+                )->setTargetLength(35,15,36),
                 TreeDropdownField::create(
                     'CTAButtonPageID',
                     'Button Link',
