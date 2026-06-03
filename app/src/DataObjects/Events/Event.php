@@ -53,8 +53,9 @@ class Event extends DataObject
     ];
 
     private static array $summaryFields = [
+        'EventImage.CMSThumbnail' => 'Image',
         'Title' => 'Title',
-        'EventLocation' => 'Location',
+        'EventLocation.Title' => 'Location',
         'StartDate' => 'Date',
     ];
 

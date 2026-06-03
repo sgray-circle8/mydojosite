@@ -40,7 +40,9 @@ class EventAdmin extends ModelAdmin
 
         if ($this->modelClass === Event::class) {
             $summaryFields = [
+                'EventImage.CMSThumbnail' => 'Image',
                 'Title' => 'Title',
+                'EventLocation.Title' => 'Location',
                 'StartDate' => 'Date',
             ];
 
