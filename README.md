@@ -1,6 +1,6 @@
 # graydojo.org website
 
-## v3.0
+## v4.0
 - Silverstripe CMS 6.1 upgrade
 - Responsive design refresh using scss / bem
 
