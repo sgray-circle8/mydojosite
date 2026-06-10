@@ -1,6 +1,38 @@
-# graydojo.org website
+# graydojo.org website: A Silverstripe 6 Project
 
-## v4.0
+## Installation
+#### 1. Set up initial environment variables
+`cp .env.example .env`
+
+#### 2. Config and start a virtual server, such as ddev
+`ddev config`
+
+`ddev start`
+
+#### 3. Install the project
+`ddev composer install`
+
+#### 4. Expose the vendor assets for public consumption
+`ddev composer vendor-expose`
+
+#### 5. Build the front end
+`nvm use`
+
+`yarn`
+
+`yarn dev`
+
+#### 6. Build the back end
+`ddev composer sake dev/build`
+
+#### 7. Access the front end at the url given for `SS_HOST` in the `.env` file
+https://graydojo.ddev.site
+
+### Data
+- Population data is coming soon :)
+- For now, it will need to be manually added in the CMS
+
+## Current version: 4.0.0
 - Silverstripe CMS 6.1 upgrade
 - Responsive design refresh using scss / bem
 
