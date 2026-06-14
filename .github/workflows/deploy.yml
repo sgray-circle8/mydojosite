@@ -1,0 +1,28 @@
+name: 🚀 Deploy site to prod on push of `production` branch
+
+on:
+  push:
+    branches:
+      - production
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Check out latest code
+        uses: actions/checkout@v4.2.0
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: www.graydojo.org
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /public_html/
+          local-dir: ./ # Upload all project files
+          exclude: |
+            **/.git*
+            **/node_modules/*
+            **/.ddev/*
+            **/public/_resources/*
+            .github/

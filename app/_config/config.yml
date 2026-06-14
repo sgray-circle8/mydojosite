@@ -1,0 +1,34 @@
+---
+Name: app
+---
+SilverStripe\Core\Manifest\ModuleManifest:
+  project: app
+
+# Caution: Indentation through two spaces, not tabs
+# YAML configuration for SilverStripe
+# See http://doc.silverstripe.org/framework/en/topics/configuration
+SilverStripe\View\SSViewer:
+  themes:
+    - '$public'
+    - 'app'
+    - '$default'
+  source_file_comments: false
+
+# Use utf8mb4 rather than utf8 for MySQL connections - this ensures some Asian languages and emojis are supported
+# See https://github.com/silverstripe/silverstripe-framework/issues/8062
+SilverStripe\ORM\Connect\MySQLDatabase:
+  connection_charset: utf8mb4
+  connection_collation: utf8mb4_unicode_ci
+  charset: utf8mb4
+  collation: utf8mb4_unicode_ci
+
+# Ensure we keep archived versions of files by default - ensures old versions of files can be retrieved if they
+# are replaced or archived
+SilverStripe\Assets\File:
+  keep_archived_assets: true
+  allowed_extensions:
+    - webmanifest
+
+# Add trailing slashes to URLs
+SilverStripe\Control\Controller:
+  add_trailing_slash: true

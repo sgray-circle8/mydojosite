@@ -1,0 +1,39 @@
+# Temporary / backup / scratch files
+/*.sql
+/*.txt
+
+# MacOS
+.DS_Store
+
+# DDEV
+/.ddev/
+
+# IDE/Editor
+/.idea
+/.vscode
+
+# Public
+/public/_graphql/
+/public/_resources/
+/public/assets/
+
+# Frontend
+/themes/app/dist
+
+# Yarn
+/mix-manifest.json
+/node_modules/
+/yarn-error.log
+
+# Silverstripe/PHP specific
+/.env
+/.graphql-generated/
+/.phpunit.result.cache
+/vendor/
+/silverstripe.log
+
+# Cypress
+/cypress/screenshots
+/cypress/videos
+/cypress.env.json
+/cypress.config.js
