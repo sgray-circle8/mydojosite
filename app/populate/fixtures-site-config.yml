@@ -1,6 +1,6 @@
 SilverStripe\SiteConfig\SiteConfig:
   main_config:
-    Title: "My Dojo Site
+    Title: "My Dojo Site"
     Tagline: "Serving the community through martial arts"
     ContactEmail: "support@example.com"
     FacebookLink: "https://www.facebook.com/MyDojoSite"

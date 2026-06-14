@@ -50,7 +50,7 @@ open-source Silverstripe CMS project.
 `yarn dev`
 
 #### 6. Build the back end
-`ddev composer sake dev/build`
+`ddev sake dev/build`
 
 #### 7. Access the front end at the url given for `SS_HOST` in the `.env` file
 https://mydojosite.ddev.site
