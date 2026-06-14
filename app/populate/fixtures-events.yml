@@ -88,6 +88,8 @@ App\DataObjects\Events\Event:
     EventType: =>App\DataObjects\Events\EventType.type1
     EventLocation: =>App\DataObjects\Events\EventLocation.loc1
     EventHost: =>App\DataObjects\Events\EventHost.host1
+    EventImage: =>SilverStripe\Assets\Image.one_col_kamae
+    Details: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat dolor sit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, excepteur sint occaecat cupidatat non proident, sunt in. Culpa qui officia deserunt mollit anim id est laborum (sed ut perspiciatis unde omnis iste) natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab.</p>"
   event2:
     Title: "Annual Black Belt Grading"
     StartDate: "2026-09-20"
@@ -95,6 +97,8 @@ App\DataObjects\Events\Event:
     EventType: =>App\DataObjects\Events\EventType.type2
     EventLocation: =>App\DataObjects\Events\EventLocation.loc4
     EventHost: =>App\DataObjects\Events\EventHost.host2
+    EventImage: =>SilverStripe\Assets\Image.one_col_castle_2
+    Details: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat dolor sit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, excepteur sint occaecat cupidatat non proident, sunt in. Culpa qui officia deserunt mollit anim id est laborum (sed ut perspiciatis unde omnis iste) natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab.</p>"
   event3:
     Title: "Jutte Historical Seminar"
     StartDate: "2026-08-25"
@@ -102,6 +106,8 @@ App\DataObjects\Events\Event:
     EventType: =>App\DataObjects\Events\EventType.type3
     EventLocation: =>App\DataObjects\Events\EventLocation.loc3
     EventHost: =>App\DataObjects\Events\EventHost.host3
+    EventImage: =>SilverStripe\Assets\Image.one_col_alcove
+    Details: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat dolor sit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, excepteur sint occaecat cupidatat non proident, sunt in. Culpa qui officia deserunt mollit anim id est laborum (sed ut perspiciatis unde omnis iste) natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab.</p>"
   event4:
     Title: "Weapons Fundamentals Intensive"
     StartDate: "2026-09-05"
@@ -109,6 +115,8 @@ App\DataObjects\Events\Event:
     EventType: =>App\DataObjects\Events\EventType.type4
     EventLocation: =>App\DataObjects\Events\EventLocation.loc2
     EventHost: =>App\DataObjects\Events\EventHost.host1
+    EventImage: =>SilverStripe\Assets\Image.one_col_training_group
+    Details: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat dolor sit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, excepteur sint occaecat cupidatat non proident, sunt in. Culpa qui officia deserunt mollit anim id est laborum (sed ut perspiciatis unde omnis iste) natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab.</p>"
   event5:
     Title: "Monthly Open Mat"
     StartDate: "2026-09-10"
@@ -116,3 +124,5 @@ App\DataObjects\Events\Event:
     EventType: =>App\DataObjects\Events\EventType.type5
     EventLocation: =>App\DataObjects\Events\EventLocation.loc5
     EventHost: =>App\DataObjects\Events\EventHost.host5
+    EventImage: =>SilverStripe\Assets\Image.one_col_training_dojo
+    Details: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat dolor sit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, excepteur sint occaecat cupidatat non proident, sunt in. Culpa qui officia deserunt mollit anim id est laborum (sed ut perspiciatis unde omnis iste) natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab.</p>"
