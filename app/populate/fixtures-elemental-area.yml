@@ -2,5 +2,9 @@
 DNADesign\Elemental\Models\ElementalArea:
   homeArea:
     OwnerClass: "App\\PageTypes\\HomePage"
-  contentPageArea:
+  aboutContentPageArea:
+    OwnerClass: "App\\PageTypes\\ContentPage"
+  trainingContentPageArea:
+    OwnerClass: "App\\PageTypes\\ContentPage"
+  mentorsContentPageArea:
     OwnerClass: "App\\PageTypes\\ContentPage"

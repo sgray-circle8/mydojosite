@@ -4,15 +4,30 @@ SilverStripe\Assets\Folder:
     Title: "Populate Images"
 
 SilverStripe\Assets\Image:
-  img_dojo_entrance:
-    Filename: populate-images/OneColumn-DojoEntrance.png
-    PopulateFileFrom: app/populate/assets/OneColumn-DojoEntrance.png
-  img_tournament_action:
-    Filename: populate-images/TwoColumn-event.png
-    PopulateFileFrom: app/populate/assets/TwoColumn-event.png
-  img_meditation_corner:
-    Filename: populate-images/OneColumn-MedCornerBonsai.png
-    PopulateFileFrom: app/populate/assets/OneColumn-MedCornerBonsai.png
-  img_youth_outreach:
-    Filename: populate-images/TwoColumn-class.png
-    PopulateFileFrom: app/populate/assets/TwoColumn-class.png
+  one_col_alcove:
+    Filename: populate-images/OneColumn-Alcove.jpg
+    PopulateFileFrom: app/populate/assets/390x400-Alcove-1.jpg
+  one_col_castle_1:
+    Filename: populate-images/OneColumn-Castle-1.jpg
+    PopulateFileFrom: app/populate/assets/390x400-Castle-1.jpg
+  one_col_castle_2:
+    Filename: populate-images/OneColumn-Castle-2.jpg
+    PopulateFileFrom: app/populate/assets/390x400-Castle-2.jpg
+  one_col_kamae:
+    Filename: populate-images/OneColumn-Kamae.jpg
+    PopulateFileFrom: app/populate/assets/390x400-Kamae.jpg
+  one_col_nindojo:
+    Filename: populate-images/OneColumn-NinDojo.jpg
+    PopulateFileFrom: app/populate/assets/390x400-NinDojo.jpg
+  one_col_training_group:
+    Filename: populate-images/OneColumn-Training-1.jpg
+    PopulateFileFrom: app/populate/assets/390x400-Training-1.jpg
+  one_col_training_dojo:
+    Filename: populate-images/OneColumn-Training-2.jpg
+    PopulateFileFrom: app/populate/assets/390x400-Training-2.jpg
+  two_col_training_dojo:
+    Filename: populate-images/TwoColumn-Training-Dojo.jpg
+    PopulateFileFrom: app/populate/assets/390x800-Training-Dojo.jpg
+  two_col_training_outdoor:
+    Filename: populate-images/TwoColumn-Training-Outdoor.jpg
+    PopulateFileFrom: app/populate/assets/390x800-Training-Outdoor.jpg

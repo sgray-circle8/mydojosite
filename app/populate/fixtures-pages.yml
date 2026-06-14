@@ -13,15 +13,17 @@ App\PageTypes\ContentPage:
     Title: "About"
     URLSegment: "about"
     ShowInMenus: 1
-    ElementalArea: =>DNADesign\Elemental\Models\ElementalArea.contentPageArea
+    ElementalArea: =>DNADesign\Elemental\Models\ElementalArea.aboutContentPageArea
   training:
     Title: "Training"
     URLSegment: "training"
     ShowInMenus: 1
+    ElementalArea: =>DNADesign\Elemental\Models\ElementalArea.trainingContentPageArea
   mentors:
     Title: "Mentors"
     URLSegment: "mentors"
     ShowInMenus: 1
+    ElementalArea: =>DNADesign\Elemental\Models\ElementalArea.mentorsContentPageArea
 
 # Events Listing Page
 App\PageTypes\EventsListingPage:
