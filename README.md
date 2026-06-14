@@ -1,5 +1,32 @@
 # graydojo.org website: A Silverstripe 6 Project
 
+A personal martial arts website converted into a shareable,
+open-source Silverstripe CMS project.
+
+## Features:
+- Page Types:
+  - Home page
+  - Content page
+  - Event listing page
+  - Contact page
+  - Testimonials page
+- Elemental Blocks:
+  - Full-width CTA block
+  - Text block
+  - Text + image block
+  - Video Text block
+  - Image block
+  - Recent events block
+- Data Models:
+  - Quotes (used in optional random quote feature in text block)
+  - Testimonials (used on Testimonials / "Kudos" page)
+  - Events:
+    - Events
+    - Hosts
+    - Locations
+    - Vendors
+    - Services
+
 ## Installation
 #### 1. Set up initial environment variables
 `cp .env.example .env`
@@ -26,15 +53,11 @@
 `ddev composer sake dev/build`
 
 #### 7. Access the front end at the url given for `SS_HOST` in the `.env` file
-https://graydojo.ddev.site
-
-### Data
-- Population data is coming soon :)
-- For now, it will need to be manually added in the CMS
+https://mydojosite.ddev.site
 
 ## Current version: 4.0.0
-- Silverstripe CMS 6.1 upgrade
-- Responsive design refresh using scss / bem
+- Silverstripe CMS 6.1
+- Responsive design refresh with scss / bem
 
 ## Breakpoints
 - 1200px  // Desktop
@@ -153,44 +176,17 @@ upload of svg files, which is why the path is hard-coded.
 - MediaPlacement (L / R)
 - Content
 
-# To Do
-- HomePage: RecentEvents: Past events: Mute title and add textual indicator / icon
-- HomePage: RecentEvents: Link to registration details / contact
+## To Do
+- Population data <in progress>
+- Cypress tests
+- Unit tests
 - About Page: New images
-- Training Page: Video Block (Would be great to have mini video players for the event listings as well)
-- Tests: phpunit, cypress
+- Video Block: Implement better video player
+- Image gallery / media archive
 - Blog
   - Investigate comment approval mechanism
-- Contact: Email template
+- Contact email: HTML email template
 - Markdown documentation including screenshots
 - Home Page - `Friends` Block ("Partners", "Associates", "Buyu")
-- Silvershop integration
-
-## To Do: Event Page
-  - Link back to Event Listing Page
-  - An 'event has passed' message if the EndDate is in the past
-    - Or if there is no EndDate, if the StartDate is in the past
-  - An h1 Title (the Event Title)
-  - Date @ Time - Date @ Time
-    - If no EndDate or if EndDate == StartDate, omit EndDate
-  - Details Section
-    - Configurable background colour
-    - Summary
-    - Venue
-    - Schedule
-    - Fees
-    - Registration info / link
-    - Social media link
-    - Payment information
-    - Meal / catering information
-    - Grading information
-    - Entertainment information
-    - Add-To-Calendar dropdown
-      - https://kendo.org.nz/event/national-naginata-seminar/
-  - Link back to Event Listing Page
-
-## To Do: Gallery
-> Used on: About Page
-- Title
-- Images
-
+- e-commerce integration
+- Member management system
