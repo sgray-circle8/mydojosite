@@ -1,0 +1,7 @@
+SilverStripe\SiteConfig\SiteConfig:
+  main_config:
+    Title: "Graydojo Site Project"
+    Tagline: "Serving the community through martial arts"
+    ContactEmail: "support@example.com"
+    FacebookLink: "https://www.facebook.com/YourDojoPage"
+    DojoAddress: "15 Somestreet, Somearea, SomeCity"

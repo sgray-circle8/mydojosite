@@ -1,0 +1,18 @@
+SilverStripe\Assets\Folder:
+  populate_folder:
+    Name: "populate-images"
+    Title: "Populate Images"
+
+SilverStripe\Assets\Image:
+  img_dojo_entrance:
+    Filename: populate-images/OneColumn-DojoEntrance.png
+    PopulateFileFrom: app/populate/assets/OneColumn-DojoEntrance.png
+  img_tournament_action:
+    Filename: populate-images/TwoColumn-event.png
+    PopulateFileFrom: app/populate/assets/TwoColumn-event.png
+  img_meditation_corner:
+    Filename: populate-images/OneColumn-MedCornerBonsai.png
+    PopulateFileFrom: app/populate/assets/OneColumn-MedCornerBonsai.png
+  img_youth_outreach:
+    Filename: populate-images/TwoColumn-class.png
+    PopulateFileFrom: app/populate/assets/TwoColumn-class.png

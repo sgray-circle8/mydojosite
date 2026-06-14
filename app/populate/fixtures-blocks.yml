@@ -1,0 +1,122 @@
+---
+App\Blocks\CTABlockFullWidth:
+  cta_home:
+    ParentID: =>DNADesign\Elemental\Models\ElementalArea.homeArea
+    Sort: 1
+    Title: "Full Width CTA Block"
+    CTASummary: "<p>This <span><strong>Full Width Call to Action Block</strong> has a <strong>Title</strong>, a <strong>Summary</strong> with WYSIWYG text, customisable button text, and the ability to select which page the link goes to in the CMS. The summary and button stack vertically on mobile, and there is a subtle on-hover colour change on the button. But that's not all...</span></p>"
+    CTAButtonText: "Keep Going - Take the next step"
+    CTAButtonPage: =>App\PageTypes\ContactPage.contact
+
+App\Blocks\TextBlock:
+  text_home:
+    ParentID: =>DNADesign\Elemental\Models\ElementalArea.homeArea
+    Sort: 2
+    Title: "This Text Block"
+    BGColour: "Light Grey"
+    BlockSummary: "could be used to briefly introduce your Dōjō. Text Blocks can have an optional Subtitle, and there are 3 background colours to choose from. The text and link for the optional button are customisable."
+    ButtonText: "Learn more"
+    LinkedPage: =>App\PageTypes\ContentPage.about
+  text_home-2:
+    ParentID: =>DNADesign\Elemental\Models\ElementalArea.homeArea
+    Sort: 4
+    Title: "Another Text Block"
+    SubTitle: "... but with a SubTitle!"
+    BGColour: "Red"
+    BlockSummary: "This text block doesn't use the optional button because the red background makes it cool enough just as it is. A class schedule could go here, for example."
+  text_home-3:
+    ParentID: =>DNADesign\Elemental\Models\ElementalArea.homeArea
+    Sort: 6
+    Title: "Text Block 3"
+    BGColour: "Light Grey"
+    BlockSummary: "This block is positioned after a two-column image block. Image blocks can be either 1 or 2 columns wide. The blocks all stack vertically on mobile."
+    ButtonText: "Jump in"
+    LinkedPage: =>App\PageTypes\ContentPage.training
+  text_home-4:
+    ParentID: =>DNADesign\Elemental\Models\ElementalArea.homeArea
+    Sort: 7
+    Title: "RANDOM!"
+    BGColour: "Red"
+    UseRandomQuote: 1
+  text_home-5:
+    ParentID: =>DNADesign\Elemental\Models\ElementalArea.homeArea
+    Sort: 8
+    Title: "Random Quotes"
+    SubTitle: "Available on text blocks"
+    BGColour: "Light Grey"
+    BlockSummary: "In addition to all the other cool stuff, text blocks also have a CMS checkbox that converts them into a random quote generator."
+  text_home-6:
+    ParentID: =>DNADesign\Elemental\Models\ElementalArea.homeArea
+    Sort: 10
+    Title: "Next Text Block"
+    BGColour: "Light Grey"
+    BlockSummary: "There's a good back story to all good text blocks and if you look hard enough here, you probably won't find the one belonging to this block. Sorry. (Check out the cool 2-column image block right after this!)"
+
+App\Blocks\ImageBlock:
+  home_r1c2:
+    ParentID: =>DNADesign\Elemental\Models\ElementalArea.homeArea
+    Sort: 3
+    Title: "Image Block: Row 1 Column 2"
+    Size: "1-Col"
+    BlockImage: =>SilverStripe\Assets\Image.img_dojo_entrance
+  home_r2c1c2:
+    ParentID: =>DNADesign\Elemental\Models\ElementalArea.homeArea
+    Sort: 5
+    Title: "Image Block: Row 2 Columns 1 and 2"
+    Size: "2-Col"
+    BlockImage: =>SilverStripe\Assets\Image.img_tournament_action
+  home_r3c3:
+    ParentID: =>DNADesign\Elemental\Models\ElementalArea.homeArea
+    Sort: 9
+    Title: "Image Block: Row 3 Column 3"
+    Size: "1-Col"
+    BlockImage: =>SilverStripe\Assets\Image.img_meditation_corner
+  home_r4c2c3:
+    ParentID: =>DNADesign\Elemental\Models\ElementalArea.homeArea
+    Sort: 11
+    Title: "Image Block: Row 4 Columns 3 and 4"
+    Size: "2-Col"
+    BlockImage: =>SilverStripe\Assets\Image.img_youth_outreach
+
+App\Blocks\RecentEventsBlock:
+  home_recent_events:
+    ParentID: =>DNADesign\Elemental\Models\ElementalArea.homeArea
+    Sort: 12
+    Title: "Recent Events Block"
+    BGColour: "Light Grey"
+    ButtonText: "All events"
+    LinkedPage: =>App\PageTypes\EventsListingPage.events
+
+App\Blocks\TextImageBlock:
+  txt_img_1:
+    ParentID: =>DNADesign\Elemental\Models\ElementalArea.contentPageArea
+    Sort: 13
+    Title: "About our Dōjō"
+    ShowTitle: 1
+    SubTitle: "Yesterday and Today"
+    BGColour: "Light Grey"
+    BlockText: "<p>Our organization was founded in our original host country several decades ago with the support of local mentors and industry leaders, becoming one of the first independent groups in the region to be established by an international expatriate. Our group originally functioned as a weekend morning workshop in which we collaborated on material that was being developed by leading experts that week. In addition to our own core membership (comprised of locals and foreign professionals) we were frequently fortunate to have senior practitioners and guest instructors assist with our regular sessions.</p>"
+    ImageAlignment: "Right"
+    Image1: =>SilverStripe\Assets\Image.img_tournament_action
+  txt_img_2:
+    ParentID: =>DNADesign\Elemental\Models\ElementalArea.contentPageArea
+    Sort: 14
+    Title: "About our Martial Art"
+    ShowTitle: 1
+    SubTitle: "History and Tradition"
+    BGColour: "Light Grey"
+    BlockText: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat dolor sit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, excepteur sint occaecat cupidatat non proident, sunt in. Culpa qui officia deserunt mollit anim id est laborum (sed ut perspiciatis unde omnis iste) natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab.</p>"
+    ImageAlignment: "Left"
+    Image1: =>SilverStripe\Assets\Image.img_meditation_corner
+
+#App\Blocks\VideoTextBlock:
+#  vid1:
+#    VideoURL: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+#  vid2:
+#    VideoURL: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+#  vid3:
+#    VideoURL: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+#  vid4:
+#    VideoURL: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+#  vid5:
+#    VideoURL: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"

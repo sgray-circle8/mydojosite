@@ -1,0 +1,6 @@
+---
+DNADesign\Elemental\Models\ElementalArea:
+  homeArea:
+    OwnerClass: "App\\PageTypes\\HomePage"
+  contentPageArea:
+    OwnerClass: "App\\PageTypes\\ContentPage"

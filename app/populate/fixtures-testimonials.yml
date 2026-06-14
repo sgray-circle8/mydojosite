@@ -1,0 +1,26 @@
+---
+App\DataObjects\Testimonial:
+  testimonial1:
+    Name: "Jane Doe"
+    Location: "Wellington"
+    Testimonial: "You're simply the best - better than all the rest!"
+  testimonial2:
+    Name: "John Smith"
+    Location: "Auckland"
+    Testimonial: "We were amazed by the level of experience and skill that was demonstrated. We will definitely be back."
+  testimonial3:
+    Name: "Sarah Jenkins"
+    Location: "Christchurch"
+    Testimonial: "The attention to detail in movement coaching is incredible!"
+  testimonial4:
+    Name: "Mike Ross"
+    Location: "Hamilton"
+    Testimonial: "A wonderful experience for my whole family. Thanks so much for your time and kindness."
+  testimonial5:
+    Name: "Emily Blunt"
+    Location: "Dunedin"
+    Testimonial: "This is the best place around to get the feeling that you're in a real Japanese dojo."
+  testimonial6:
+    Name: "CMS Author"
+    Location: "YourSite"
+    Testimonial: "So easy to set up these quotes in the CMS! ;-)"

@@ -1,0 +1,17 @@
+---
+App\DataObjects\Quote:
+  quote1:
+    QuoteText: "The only way to do great work is to love what you do."
+    QuoteSource: "Steve Jobs"
+  quote2:
+    QuoteText: "Innovation distinguishes between a leader and a follower."
+    QuoteSource: "Steve Jobs"
+  quote3:
+    QuoteText: "Quality is not an act, it is a habit."
+    QuoteSource: "Aristotle"
+  quote4:
+    QuoteText: "Simplicity is the ultimate sophistication."
+    QuoteSource: "Leonardo da Vinci"
+  quote5:
+    QuoteText: "Code is like humor. When you have to explain it, it’s bad."
+    QuoteSource: "Cory House"

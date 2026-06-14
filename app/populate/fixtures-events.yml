@@ -1,0 +1,118 @@
+# 1. Define lowest-level dependencies first
+App\DataObjects\Events\EventVendorService:
+  service1:
+    ServiceName: "Tatami Maintenance"
+  service2:
+    ServiceName: "Equipment Supplier"
+  service3:
+    ServiceName: "First Aid & Safety"
+  service4:
+    ServiceName: "Photography & Media"
+  service5:
+    ServiceName: "Cleaning & Sanitation"
+
+App\DataObjects\Events\EventVendor:
+  vendor1:
+    VendorName: "ProMat Solutions"
+    VendorContactName: "Kenji"
+    VendorService: =>App\DataObjects\Events\EventVendorService.service1
+  vendor2:
+    VendorName: "Budo Gear Imports"
+    VendorContactName: "Sarah"
+    VendorService: =>App\DataObjects\Events\EventVendorService.service2
+  vendor3:
+    VendorName: "SafetyFirst Training"
+    VendorContactName: "Marcus"
+    VendorService: =>App\DataObjects\Events\EventVendorService.service3
+  vendor4:
+    VendorName: "Local Arts Media"
+    VendorContactName: "Elena"
+    VendorService: =>App\DataObjects\Events\EventVendorService.service4
+  vendor5:
+    VendorName: "Dojo Cleaners"
+    VendorContactName: "David"
+    VendorService: =>App\DataObjects\Events\EventVendorService.service5
+
+App\DataObjects\Events\EventHost:
+  host1:
+    EventHostName: "Bujinkan Honbu Dojo"
+  host2:
+    EventHostName: "Regional Martial Arts Alliance"
+  host3:
+    EventHostName: "Historical Weapons Guild"
+  host4:
+    EventHostName: "Local Community Center"
+  host5:
+    EventHostName: "Youth Outreach Program"
+
+App\DataObjects\Events\EventType:
+  type1:
+    EventTypeName: "Technical Workshop"
+  type2:
+    EventTypeName: "Grading Examination"
+  type3:
+    EventTypeName: "Seminar"
+  type4:
+    EventTypeName: "Weapons Training"
+  type5:
+    EventTypeName: "Open Mat"
+
+App\DataObjects\Events\EventLocation:
+  loc1:
+    Title: "Main Training Hall"
+    Address: "10 Martial Arts Way"
+    ManagedBy: =>App\DataObjects\Events\EventVendor.vendor1
+  loc2:
+    Title: "Advanced Weaponry Studio"
+    Address: "45 Katana Lane"
+    ManagedBy: =>App\DataObjects\Events\EventVendor.vendor2
+  loc3:
+    Title: "External Demonstration Space"
+    Address: "88 Public Square"
+    ManagedBy: =>App\DataObjects\Events\EventVendor.vendor4
+  loc4:
+    Title: "Full-Scale Arena"
+    Address: "1 Sports Complex Ave"
+    ManagedBy: =>App\DataObjects\Events\EventVendor.vendor3
+  loc5:
+    Title: "Community Annex"
+    Address: "5 Neighborhood St"
+    ManagedBy: =>App\DataObjects\Events\EventVendor.vendor5
+
+# 2. Finally, define the Events linking to the objects above
+App\DataObjects\Events\Event:
+  event1:
+    Title: "Kunai Proficiency Workshop"
+    StartDate: "2026-08-05"
+    StartTime: "10:00:00"
+    EventType: =>App\DataObjects\Events\EventType.type1
+    EventLocation: =>App\DataObjects\Events\EventLocation.loc1
+    EventHost: =>App\DataObjects\Events\EventHost.host1
+  event2:
+    Title: "Annual Black Belt Grading"
+    StartDate: "2026-09-20"
+    StartTime: "09:00:00"
+    EventType: =>App\DataObjects\Events\EventType.type2
+    EventLocation: =>App\DataObjects\Events\EventLocation.loc4
+    EventHost: =>App\DataObjects\Events\EventHost.host2
+  event3:
+    Title: "Jutte Historical Seminar"
+    StartDate: "2026-08-25"
+    StartTime: "13:00:00"
+    EventType: =>App\DataObjects\Events\EventType.type3
+    EventLocation: =>App\DataObjects\Events\EventLocation.loc3
+    EventHost: =>App\DataObjects\Events\EventHost.host3
+  event4:
+    Title: "Weapons Fundamentals Intensive"
+    StartDate: "2026-09-05"
+    StartTime: "14:00:00"
+    EventType: =>App\DataObjects\Events\EventType.type4
+    EventLocation: =>App\DataObjects\Events\EventLocation.loc2
+    EventHost: =>App\DataObjects\Events\EventHost.host1
+  event5:
+    Title: "Monthly Open Mat"
+    StartDate: "2026-09-10"
+    StartTime: "18:00:00"
+    EventType: =>App\DataObjects\Events\EventType.type5
+    EventLocation: =>App\DataObjects\Events\EventLocation.loc5
+    EventHost: =>App\DataObjects\Events\EventHost.host5

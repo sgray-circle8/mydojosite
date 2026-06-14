@@ -1,0 +1,50 @@
+---
+Name: app-populate
+After: app
+---
+
+DNADesign\Populate\Populate:
+  truncate_objects:
+    # Core SilverStripe objects
+    - Page
+    - SilverStripe\Assets\File
+    - SilverStripe\Assets\Folder
+    - SilverStripe\Assets\Image
+    - SilverStripe\SiteConfig\SiteConfig
+
+    # App Page Types
+    - App\PageTypes\HomePage
+    - App\PageTypes\ContactPage
+    - App\PageTypes\ContentPage
+    - App\PageTypes\EventsListingPage
+    - App\PageTypes\TestimonialsPage
+
+    # App DataObjects (Events)
+    - App\DataObjects\Events\Event
+    - App\DataObjects\Events\EventHost
+    - App\DataObjects\Events\EventLocation
+    - App\DataObjects\Events\EventType
+    - App\DataObjects\Events\EventVendor
+    - App\DataObjects\Events\EventVendorService
+
+    # App DataObjects (Other)
+    - App\DataObjects\Quote
+    - App\DataObjects\Testimonial
+
+    # App Blocks
+    - App\Blocks\CTABlockFullWidth
+    - App\Blocks\ImageBlock
+    - App\Blocks\RecentEventsBlock
+    - App\Blocks\TextBlock
+    - App\Blocks\TextImageBlock
+    - App\Blocks\VideoTextBlock
+
+  include_yaml_fixtures:
+    - 'app/populate/fixtures-site-config.yml'
+    - 'app/populate/fixtures-elemental-area.yml'
+    - 'app/populate/fixtures-images.yml'
+    - 'app/populate/fixtures-pages.yml'
+    - 'app/populate/fixtures-blocks.yml'
+    - 'app/populate/fixtures-events.yml'
+    - 'app/populate/fixtures-quotes.yml'
+    - 'app/populate/fixtures-testimonials.yml'

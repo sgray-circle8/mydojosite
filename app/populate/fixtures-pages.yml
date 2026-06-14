@@ -1,0 +1,49 @@
+---
+# Home Page
+App\PageTypes\HomePage:
+  home:
+    Title: "Home"
+    URLSegment: "home"
+    ShowInMenus: 1
+    ElementalArea: =>DNADesign\Elemental\Models\ElementalArea.homeArea
+
+# Content Pages (About, Training, Mentors)
+App\PageTypes\ContentPage:
+  about:
+    Title: "About"
+    URLSegment: "about"
+    ShowInMenus: 1
+    ElementalArea: =>DNADesign\Elemental\Models\ElementalArea.contentPageArea
+  training:
+    Title: "Training"
+    URLSegment: "training"
+    ShowInMenus: 1
+  mentors:
+    Title: "Mentors"
+    URLSegment: "mentors"
+    ShowInMenus: 1
+
+# Events Listing Page
+App\PageTypes\EventsListingPage:
+  events:
+    Title: "Events"
+    URLSegment: "events"
+    ShowInMenus: 1
+
+# Testimonials Page
+App\PageTypes\TestimonialsPage:
+  testimonials:
+    Title: "Kudos"
+    URLSegment: "kudos"
+    ShowInMenus: 1
+
+# Contact Page
+App\PageTypes\ContactPage:
+  contact:
+    Title: "Contact"
+    URLSegment: "contact"
+    ShowInMenus: 1
+    InfoBlockTitle: "We'd love to hear from you"
+    InfoBlockContent: "<p>Please fill out the form below to get in touch with our team.</p>"
+    ThankYouMessage: "Thanks for reaching out! We will reply shortly."
+

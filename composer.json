@@ -25,6 +25,7 @@
     },
     "require-dev": {
         "phpstan/extension-installer": "^1.4",
+        "dnadesign/silverstripe-populate": "^4",
         "phpunit/phpunit": "^11.5",
         "silverstripeltd/bespoke-standards": "^1.6",
         "wernerkrauss/silverstripe-rector": "*"
@@ -70,5 +71,8 @@
         "resources-dir": "_resources"
     },
     "prefer-stable": true,
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "scripts": {
+        "populate": "sake dev/tasks/PopulateTask flush=1"
+    }
 }
