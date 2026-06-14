@@ -52,7 +52,10 @@ open-source Silverstripe CMS project.
 #### 6. Build the back end
 `ddev sake dev/build`
 
-#### 7. Access the front end at the url given for `SS_HOST` in the `.env` file
+#### 8. Populate the data
+`ddev composer populate`
+
+#### 8. Access the front end at the url given for `SS_HOST` in the `.env` file
 https://mydojosite.ddev.site
 
 ## Current version: 4.0.0
