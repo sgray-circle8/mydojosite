@@ -1,7 +1,27 @@
-# graydojo.org website: A Silverstripe 6 Project
+# MyDojoSite: Silverstripe CMS 6 for Martial Arts Websites
 
 A personal martial arts website converted into a shareable,
 open-source Silverstripe CMS project.
+
+[//]: # (![MyDojoSite]&#40;docs/img/MyDojoSite.png&#41;)
+
+<table>
+<tr>
+  <td valign="top"><img src="docs/img/MyDojoSite.png" alt="Home Page"></td>
+  <td valign="top"><img src="docs/img/HomePage-RecentEventsBlock.png" alt="Recent Events Block"></td>
+  <td valign="top"><img src="docs/img/AboutPage.jpg" alt="About Page"></td>
+</tr>
+<tr>
+  <td valign="top"><img src="docs/img/TrainingPage.jpg" alt="Training Page"></td>
+  <td valign="top"><img src="docs/img/InstructorsPage.jpg" alt="Instructors Page"></td>
+  <td valign="top"><img src="docs/img/AboutPage.jpg" alt="About Page"></td>
+</tr>
+<tr>
+  <td valign="top"><img src="docs/img/EventsListingPage.jpg" alt="Events Listing Page Page"></td>
+  <td valign="top"><img src="docs/img/TestimonialsPage.jpg" alt="Testimonials Page"></td>
+  <td valign="top"><img src="docs/img/ContactPage.jpg" alt="Contact Page"></td>
+</tr>
+</table>
 
 ## Features:
 - Page Types:
@@ -89,10 +109,11 @@ upload of svg files, which is why the path is hard-coded.
 
 ## Page Types
 - Home Page
-- Content Page
+ 
+- Content Page 
   - "About", "Training", "Mentors"
 
-- Event Listing Page
+- Events Listing Page
   - Page Title h1
   - List Events descending StartDate
   - For each Event
@@ -102,14 +123,10 @@ upload of svg files, which is why the path is hard-coded.
       - Title (h2 or h3), linked to Event Page
       - Summary (truncated to x characters if needed)
 
-- Stories Page (Kudos / Testimonials)
-  - "Stories"
+- Testimonials Page
 
 - Contact Page
-  - CTATitle
-  - CTABody
   - ContactForm
-  - LocationsTitle
   - Google Map Block
 
 ## Blocks
@@ -136,38 +153,15 @@ upload of svg files, which is why the path is hard-coded.
 > Used on: Home Page
 - Image
 
-### RecentEvents Block
+### Recent Events Block
+> Used on: Home Page
 - I can see the 4 most recent events on the home page
 - When I click on an event image / link, I am taken to the associated Event Page
 - I can see a "Show all -->" button that links to the Event Listing Page
 
- ### BuyuBlock (Friends, Associates, Partners, Etc)
-> Used on: Home Page
-- Title
-- BuyuItem (has_many)
-
-### CTA Block (Restricted Width)
-> Used on: Home Page
-- BackgroundColour
-- ForegroundColour
-- Title
-- CTABody
-- CTAButton
-  - ButtonText
-  - ButtonURL
-
-### About Block
-> Used on: About Page
-- Title
-- Subtitle
-- Content
-- Image1
-- Image1Caption
-- Image2
-- Image2Caption
 
 ### Image Text Block
-> Used on: Content Page
+> Used on: Content Pages ("About", "Training", "Mentors")
 - Title
 - SubTitle
 - Background Colour (White, Light Grey, Dark Grey, Red)
@@ -180,16 +174,17 @@ upload of svg files, which is why the path is hard-coded.
 - Content
 
 ## To Do
-- Population data <in progress>
+- Population data for VideoTextBlock examples
 - Cypress tests
 - Unit tests
-- About Page: New images
-- Video Block: Implement better video player
+- VideoTextBlock
+  - Population data
+  - Implement better video player
 - Image gallery / media archive
 - Blog
   - Investigate comment approval mechanism
 - Contact email: HTML email template
 - Markdown documentation including screenshots
-- Home Page - `Friends` Block ("Partners", "Associates", "Buyu")
+- Home Page - `Friends` Block ("Partners" / "Associates")
 - e-commerce integration
 - Member management system
