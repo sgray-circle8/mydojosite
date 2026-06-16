@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/silverstripe/framework/tests/bootstrap.php" colors="true">
+    <testsuites>
+        <testsuite name="Default">
+            <directory>app/tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <php>
+        <env name="SS_DATABASE_CLASS" value="MySQLPDODatabase" />
+        <env name="SS_DATABASE_USERNAME" value="root" />
+        <env name="SS_DATABASE_PASSWORD" value="root" />
+        <env name="SS_DATABASE_HOST" value="db" />
+        <env name="SS_DATABASE_NAME" value="db" />
+    </php>
+</phpunit>
