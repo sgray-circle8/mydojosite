@@ -3,7 +3,6 @@
 namespace App\Tests\DataObjects;
 
 use App\DataObjects\Events\EventVendor;
-use App\DataObjects\Events\EventVendorService;
 use SilverStripe\Dev\SapphireTest;
 
 class EventVendorTest extends SapphireTest

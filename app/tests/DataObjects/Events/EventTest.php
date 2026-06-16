@@ -11,11 +11,9 @@ class EventTest extends SapphireTest
 
     public function testIsPast()
     {
-        // Fetch the events from the fixture
         $futureEvent = $this->objFromFixture(Event::class, 'future_event');
         $pastEvent = $this->objFromFixture(Event::class, 'past_event');
 
-        // Assert that the expected results are returned
         $this->assertFalse($futureEvent->IsPast(), 'Future event should not be marked as past');
         $this->assertTrue($pastEvent->IsPast(), 'Past event should be marked as past');
     }
