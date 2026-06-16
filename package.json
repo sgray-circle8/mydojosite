@@ -20,7 +20,7 @@
     "test:e2e": "cypress run --browser chrome",
     "test:coverage": "node nyc-coverage.js",
     "lint:css": "stylelint themes/app/src/scss/**/*.scss themes/app/src/js/**/*.vue",
-    "lint:js": "eslint --ext .js,.vue themes/app/src/js",
+    "lint:js": "eslint --ext .js,.vue themes/app/src/js --no-error-on-unmatched-pattern",
     "lint": "yarn lint:css && yarn lint:js"
   },
   "devDependencies": {
