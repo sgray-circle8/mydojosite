@@ -1,0 +1,25 @@
+SilverStripe\CMS\Model\SiteTree:
+  listing_page:
+    Title: "Events Listing"
+    URLSegment: "events-listing"
+
+App\DataObjects\Events\Event:
+  e1:
+    Title: "Oldest"
+    StartDate: "2024-01-01"
+  e2:
+    Title: "Recent 1"
+    StartDate: "2026-01-01"
+  e3:
+    Title: "Recent 2"
+    StartDate: "2026-02-01"
+  e4:
+    Title: "Recent 3"
+    StartDate: "2026-03-01"
+  e5:
+    Title: "Newest"
+    StartDate: "2026-04-01"
+
+App\Blocks\RecentEventsBlock:
+  block1:
+    LinkedPage: =>SilverStripe\CMS\Model\SiteTree.listing_page

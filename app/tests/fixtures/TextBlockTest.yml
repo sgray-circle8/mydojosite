@@ -1,0 +1,4 @@
+App\DataObjects\Quote:
+  q1:
+    QuoteText: "Test quote"
+    QuoteSource: "Source A"

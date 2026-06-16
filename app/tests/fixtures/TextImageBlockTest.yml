@@ -1,0 +1,6 @@
+App\Blocks\TextImageBlock:
+  text_image_block:
+    SubTitle: "Our Process"
+    BGColour: "Light Grey"
+    BlockText: "<p>Detailed description of our process.</p>"
+    ImageAlignment: "Right"

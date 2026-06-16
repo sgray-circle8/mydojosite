@@ -1,0 +1,5 @@
+App\DataObjects\Events\EventVendorService:
+  catering:
+    ServiceName: "Catering"
+  lighting:
+    ServiceName: "Lighting & Sound"

@@ -1,0 +1,3 @@
+App\PageTypes\HomePage:
+  home:
+    Title: "Home"

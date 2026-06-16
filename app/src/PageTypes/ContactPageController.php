@@ -14,6 +14,8 @@ use SilverStripe\SiteConfig\SiteConfig;
 
 class ContactPageController extends ContentController
 {
+    private static bool $enable_spam_protection = true;
+
     private static array $allowed_actions = [
         'Form',
         'submit',
@@ -33,7 +35,10 @@ class ContactPageController extends ContentController
         );
 
         $form = Form::create($this, 'Form', $fields, $actions);
-        $form->enableSpamProtection();
+
+        if ($this->config()->get('enable_spam_protection')) {
+            $form->enableSpamProtection();
+        }
 
         return $form;
     }

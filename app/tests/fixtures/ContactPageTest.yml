@@ -1,0 +1,6 @@
+App\PageTypes\ContactPage:
+  my_contact_page:
+    Title: "Contact Us"
+    InfoBlockTitle: "Get In Touch"
+    InfoBlockContent: "<p>We look forward to hearing from you.</p>"
+    ThankYouMessage: "Thanks for your message!"

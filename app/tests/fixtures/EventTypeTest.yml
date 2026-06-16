@@ -1,0 +1,5 @@
+App\DataObjects\Events\EventType:
+  workshop:
+    EventTypeName: "Workshop"
+  seminar:
+    EventTypeName: "Seminar"

@@ -1,0 +1,4 @@
+App\PageTypes\ContactPage:
+  contact_page:
+    Title: "Contact Us"
+    URLSegment: "contact-page"

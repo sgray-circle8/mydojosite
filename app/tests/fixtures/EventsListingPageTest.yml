@@ -1,0 +1,13 @@
+App\PageTypes\EventsListingPage:
+  event_page:
+    Title: "Our Events"
+
+App\DataObjects\Events\Event:
+  event_one:
+    Title: "Past Event"
+    StartDate: "2025-01-01"
+    EventListingPage: =>App\PageTypes\EventsListingPage.event_page
+  event_two:
+    Title: "Future Event"
+    StartDate: "2027-01-01"
+    EventListingPage: =>App\PageTypes\EventsListingPage.event_page

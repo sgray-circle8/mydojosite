@@ -1,0 +1,9 @@
+App\DataObjects\Events\EventVendor:
+  vendor_a:
+    VendorName: "City Property Management"
+
+App\DataObjects\Events\EventLocation:
+  office_location:
+    Title: "Downtown Office"
+    Address: "123 Main St"
+    ManagedBy: =>App\DataObjects\Events\EventVendor.vendor_a

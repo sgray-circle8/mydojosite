@@ -1,0 +1,5 @@
+App\DataObjects\Events\EventHost:
+  main_host:
+    EventHostName: "Community Center"
+    EventLocation: "Wellington"
+    EventHostURL: "https://wellington.example.com"

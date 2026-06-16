@@ -1,0 +1,8 @@
+App\DataObjects\Events\EventVendorService:
+  food:
+    ServiceName: "Food Service"
+
+App\DataObjects\Events\EventVendor:
+  catering:
+    VendorName: "Catering Experts"
+    VendorService: =>App\DataObjects\Events\EventVendorService.food

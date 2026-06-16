@@ -1,0 +1,5 @@
+App\DataObjects\Quote:
+  quote:
+    Name: "Alice Smith"
+    Location: "Wellington"
+    Testimonial: "This service was incredibly professional and I would recommend it to anyone looking for high-quality results."

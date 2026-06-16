@@ -1,0 +1,21 @@
+App\DataObjects\Events\EventHost:
+  my_host:
+    EventHostName: "Tech Conference Pros"
+    EventHostURL: "https://example.com"
+
+App\DataObjects\Events\EventVendor:
+  my_vendor:
+    VendorName: "Catering Experts"
+
+App\DataObjects\Events\Event:
+  future_event:
+    Title: "Upcoming Conference"
+    StartDate: "2027-01-01"
+  past_event:
+    Title: "Last Year's Workshop"
+    StartDate: "2025-01-01"
+  my_event:
+    Title: "Annual Gala"
+    EventHost: =>App\DataObjects\Events\EventHost.my_host
+    Vendors:
+      - =>App\DataObjects\Events\EventVendor.my_vendor

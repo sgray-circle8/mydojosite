@@ -1,0 +1,15 @@
+App\PageTypes\EventsListingPage:
+  events_page:
+    Title: "Upcoming Events"
+    URLSegment: "events"
+
+App\DataObjects\Events\Event:
+  past_event:
+    Title: "Past Seminar"
+    StartDate: "2026-01-01"
+  mid_event:
+    Title: "Mid-year Festival"
+    StartDate: "2026-06-01"
+  future_event:
+    Title: "New Year's Gala"
+    StartDate: "2026-12-31"

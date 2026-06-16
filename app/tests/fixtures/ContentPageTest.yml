@@ -1,0 +1,5 @@
+App\PageTypes\ContentPage:
+  basic_content_page:
+    Title: "About Us"
+    URLSegment: "about-us"
+    Content: "<p>This is some standard content.</p>"

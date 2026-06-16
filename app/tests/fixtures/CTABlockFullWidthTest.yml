@@ -1,0 +1,10 @@
+SilverStripe\CMS\Model\SiteTree:
+  target_page:
+    Title: "Target Page"
+    URLSegment: "target-page"
+
+App\Blocks\CTABlockFullWidth:
+  cta_block:
+    CTASummary: "<p>Check out our services.</p>"
+    CTAButtonText: "Click Here"
+    CTAButtonPage: =>SilverStripe\CMS\Model\SiteTree.target_page

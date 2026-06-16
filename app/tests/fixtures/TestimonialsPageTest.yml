@@ -1,0 +1,11 @@
+App\PageTypes\TestimonialsPage:
+  testimonials_page:
+    Title: "Customer Testimonials"
+
+App\DataObjects\Testimonial:
+  t1:
+    Name: "Alice"
+    Testimonial: "First review"
+  t2:
+    Name: "Bob"
+    Testimonial: "Second review"
