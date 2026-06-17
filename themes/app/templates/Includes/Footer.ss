@@ -5,7 +5,7 @@
 				<span class="logo--footer">
 					<img src="/_resources/themes/app/dist/img/MyDojoSiteLogo.svg" style="max-width:32px; max-height:32px;background-color: black; fill: white;">
 				</span>
-				<strong style="font-size: 1.1rem; letter-spacing: 1px; font-style: italic;">
+				<strong class="strip-tagline">
 					$SiteConfig.Tagline
 				</strong>
 			</div>
