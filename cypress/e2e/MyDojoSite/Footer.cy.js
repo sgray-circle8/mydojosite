@@ -5,7 +5,7 @@ describe('Footer', () => {
     cy.visit('https://graydojo.ddev.site/');
   })
 
-  // Black Footer strip is visible on mobile, containing logo, tagline, and back-to-top button
+  // Footer strip is visible on mobile with expected colour, logo, tagline, and back-to-top button
   it('Mobile: Footer Strip', () => {
     cy.viewport('iphone-5');
 
@@ -15,7 +15,7 @@ describe('Footer', () => {
       .should('be.visible')
       .and('have.css', 'background-color', 'rgb(17, 24, 39)');
 
-    // Footer logo image is visible
+    // Footer logo image and tagline visible
     cy.get('.logo--footer img').should('be.visible');
     cy.get('.strip-tagline').should('be.visible');
 
@@ -32,7 +32,7 @@ describe('Footer', () => {
     // Links area is visible
     cy.get('.footer-links-area').scrollIntoView().should('be.visible');
 
-    // Confirm that the links area has 1 column
+    // Confirm that the links area has 1 column as expected
     cy.get('.footer-links-area')
       .invoke('css', 'grid-template-columns')
         .should((cssValue) => {
@@ -40,15 +40,35 @@ describe('Footer', () => {
           const columnCount = cssValue.trim().split(/\s+/).length;
           expect(columnCount).to.equal(1);
       });
+
+    // Confirm that there are 3 contact items and 7 sitemap items
+    cy.get('.contact-block ul > li').should('have.length', 3);
+    cy.get('.sitemap-columns ul li').should('have.length', 7);
   })
 
-  // Black Footer strip is visible on desktop, containing logo, tagline, and back-to-top button
+  // Footer strip is visible on desktop with expected colour, logo, tagline, and back-to-top button
   it('Desktop: Footer Strip', () => {
     cy.viewport(1200, 480);
 
     cy.get('.footer-strip')
-      .should('be.visible')
-      .and('have.css', 'background-color', 'rgb(17, 24, 39)');
+        .should('be.visible')
+        .and('have.css', 'background-color', 'rgb(17, 24, 39)');
   })
 
+  // Desktop Footer Area
+  it('Desktop: Footer Links Area', () => {
+    cy.viewport(1200, 480);
+
+    // Links area is visible
+    cy.get('.footer-links-area').scrollIntoView().should('be.visible');
+
+    // Confirm that the links area has 2 columns as expected
+    cy.get('.footer-links-area')
+      .invoke('css', 'grid-template-columns')
+        .should((cssValue) => {
+          // Split the string into an array of columns
+          const columnCount = cssValue.trim().split(/\s+/).length;
+          expect(columnCount).to.equal(2);
+      });
+  })
 })
