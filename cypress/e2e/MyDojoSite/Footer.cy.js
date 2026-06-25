@@ -2,7 +2,7 @@
 
 describe('Footer', () => {
   beforeEach(() => {
-    cy.visit('https://graydojo.ddev.site/');
+    cy.visit('/');
   })
 
   // Footer strip is visible on mobile with expected colour, logo, tagline, and back-to-top button

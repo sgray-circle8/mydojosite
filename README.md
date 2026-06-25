@@ -1,10 +1,32 @@
-# MyDojoSite: Silverstripe CMS 6 for Martial Arts Websites
+# MyDojoSite (Build your own martial arts website)
 
-A personal martial arts website converted into a shareable,
-open-source Silverstripe CMS project.
+## Open-source website project built with Silverstripe CMS 6
+### Featuring good stuff like:
+  - Fully customizable components and content
+  - Five page types
+  - Six block types
+  - Three data models (Quotes, Testimonials, Events)
+  - Sample data with population script
+  - Unit tests
+  - E2E (Cypress) tests
 
-[//]: # (![MyDojoSite]&#40;docs/img/MyDojoSite.png&#41;)
+### What's Inside
+- Overview
+  - [Screenshots](#screenshots)
+  - [Features](#features)
+  - [Target viewport widths (breakpoints)](#target-viewport-widths)
+- How It Works
+  - [Common components](#common-components)
+  - [Page types](#page-types)
+  - [Block types](#block-types)
+  - [Events data model](#events-data-model)
+  - [Testimonials data model](#testimonials-data-model)
+  - [Quotes data model](#quotes-data-model)
+- Let's Do This!
+  - [Install it](./docs/installation.md)
+  - [Test it](./docs/testing.md)
 
+### Screenshots
 <table>
 <tr>
   <td valign="top"><img src="docs/img/MyDojoSite.png" alt="Home Page"></td>
@@ -23,21 +45,23 @@ open-source Silverstripe CMS project.
 </tr>
 </table>
 
-## Features:
-- Page Types:
+[Back to Top](#mydojosite-build-your-own-martial-arts-website)
+
+### Features
+- **Page Types**
   - Home page
   - Content page
   - Event listing page
   - Contact page
   - Testimonials page
-- Elemental Blocks:
+- **Elemental Blocks**
   - Full-width CTA block
   - Text block
   - Text + image block
   - Video Text block
   - Image block
   - Recent events block
-- Data Models:
+- **Data Models**
   - Quotes (used in optional random quote feature in text block)
   - Testimonials (used on Testimonials / "Kudos" page)
   - Events:
@@ -47,51 +71,20 @@ open-source Silverstripe CMS project.
     - Vendors
     - Services
 
-## Installation
-#### 1. Set up initial environment variables
-`cp .env.example .env`
+[Back to Top](#mydojosite-build-your-own-martial-arts-website)
 
-#### 2. Config and start a virtual server, such as ddev
-`ddev config`
-
-`ddev start`
-
-#### 3. Install the project
-`ddev composer install`
-
-#### 4. Expose the vendor assets for public consumption
-`ddev composer vendor-expose`
-
-#### 5. Build the front end
-`nvm use`
-
-`yarn`
-
-`yarn dev`
-
-#### 6. Build the back end
-`ddev sake dev/build`
-
-#### 8. Populate the data
-`ddev composer populate`
-
-#### 8. Access the front end at the url given for `SS_HOST` in the `.env` file
-https://mydojosite.ddev.site
-
-## Current version: 4.0.0
-- Silverstripe CMS 6.1
-- Responsive design refresh with scss / bem
-
-## Breakpoints
+## Target viewport widths
 - 1200px  // Desktop
 - 992px   // Tablet Large
 - 768px   // Tablet Small
 - < 768px // Mobile
 
-## Common Components
+[Back to Top](#mydojosite-build-your-own-martial-arts-website)
+
+## Common components
 ### Logos
 The logo used in both the header and footer is the same svg file,
-whose path is hard-coded in the header and footer templates.  Using svg 
+whose path is hard-coded in the header and footer templates.  Using svg
 allows the same file to be used for both logos, however the CMS prevents
 upload of svg files, which is why the path is hard-coded.
 
@@ -107,7 +100,9 @@ upload of svg files, which is why the path is hard-coded.
   - URL
   - Location
 
-## Page Types
+[Back to Top](#mydojosite-build-your-own-martial-arts-website)
+
+## Page types
 - Home Page
  
 - Content Page 
@@ -129,7 +124,9 @@ upload of svg files, which is why the path is hard-coded.
   - ContactForm
   - Google Map Block
 
-## Blocks
+[Back to Top](#mydojosite-build-your-own-martial-arts-website)
+
+## Block types
 ### CTA Block (Full Width)
 > Used on: Home Page
 - CTABody
@@ -173,18 +170,20 @@ upload of svg files, which is why the path is hard-coded.
 - MediaPlacement (L / R)
 - Content
 
-## To Do
-- Population data for VideoTextBlock examples
-- Cypress tests
-- Unit tests
-- VideoTextBlock
-  - Population data
-  - Implement better video player
-- Image gallery / media archive
-- Blog
-  - Investigate comment approval mechanism
-- Contact email: HTML email template
-- Markdown documentation including screenshots
-- Home Page - `Friends` Block ("Partners" / "Associates")
-- e-commerce integration
-- Member management system
+[Back to Top](#mydojosite-build-your-own-martial-arts-website)
+
+## Events data model
+Information will be added to this section in due course.
+
+[Back to Top](#mydojosite-build-your-own-martial-arts-website)
+
+## Testimonials data model
+Information will be added to this section in due course.
+
+[Back to Top](#mydojosite-build-your-own-martial-arts-website)
+
+## Quotes data model
+Information will be added to this section in due course.
+
+[Back to Top](#mydojosite-build-your-own-martial-arts-website)
+

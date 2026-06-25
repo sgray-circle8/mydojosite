@@ -2,7 +2,7 @@
 
 describe('Header / Nav', () => {
   beforeEach(() => {
-    cy.visit('https://graydojo.ddev.site/');
+    cy.visit('/');
   })
 
   // Mobile header is visible, containing logo and title
