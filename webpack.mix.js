@@ -24,27 +24,15 @@ const sassOptions = {
     }
 };
 
-// Mix the Javascript and Scss
-mix
-    // JS
-    // .js(`${srcFolder}/js/bootstrap.js`, "/js/")
-    // Vue
+// Mix JS and Scss
+mix.js(`${srcFolder}/js/app.js`, `${distFolder}/js/`)
     .vue({ version: 3 })
-    // SCSS
-    .sass(`${srcFolder}/scss/app.scss`, "/css", sassOptions)
-
-// Copy css
-mix.copyDirectory(`${srcFolder}/css`, `${distFolder}/css`);
-
-// // Copy js
-// mix.copyDirectory(`${srcFolder}/css`, `${distFolder}/css`);
+    .sass(`${srcFolder}/scss/app.scss`, `${distFolder}/css/`, sassOptions)
+    .sourceMaps();
 
 // Copy fonts
 // mix.copyDirectory(`${srcFolder}/fonts`, `${distFolder}/fonts`);
 // mix.copyDirectory(`${srcFolder}/webfonts`, `${distFolder}/webfonts`);
-
-// Copy 'revolution/'
-// mix.copyDirectory(`${srcFolder}/revolution`, `${distFolder}/revolution`);
 
 mix.setPublicPath(distFolder);
 mix.setResourceRoot(publicFolder); // Prefixes urls in processed css with _resources/themes/app/dist

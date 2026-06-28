@@ -3,6 +3,7 @@
 namespace App\PageTypes;
 
 use SilverStripe\CMS\Controllers\ContentController;
+use SilverStripe\View\Requirements;
 
 class HomePageController extends ContentController
 {
@@ -12,6 +13,7 @@ class HomePageController extends ContentController
     protected function init()
     {
         parent::init();
+        Requirements::javascript('themes/app/dist/js/app.js');
     }
 
 }

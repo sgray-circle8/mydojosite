@@ -7,6 +7,7 @@
   - Six block types
   - Three data models (Quotes, Testimonials, Events)
   - Sample data with population script
+  - Vue 3
   - Unit tests
   - E2E (Cypress) tests
 
@@ -60,7 +61,7 @@
   - Text + image block
   - Video Text block
   - Image block
-  - Recent events block
+  - Recent events block (Vue 3 component)
 - **Data Models**
   - Quotes (used in optional random quote feature in text block)
   - Testimonials (used on Testimonials / "Kudos" page)
@@ -151,10 +152,11 @@ upload of svg files, which is why the path is hard-coded.
 - Image
 
 ### Recent Events Block
-> Used on: Home Page
+>- Vue 3 component
+>- Used on: Home Page
 - I can see the 4 most recent events on the home page
-- When I click on an event image / link, I am taken to the associated Event Page
 - I can see a "Show all -->" button that links to the Event Listing Page
+- ToDo: *When I click on an event image / link, I am taken to the associated Event Page*
 
 
 ### Image Text Block
