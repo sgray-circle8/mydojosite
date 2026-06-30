@@ -78,6 +78,11 @@
     "vue-loader": "^17.0.1",
     "webpack": "^5.74.0"
   },
+  "resolutions": {
+    "laravel-mix/webpack": "5.88.2",
+    "webpack-cli/webpack": "5.88.2",
+    "webpack": "5.88.2"
+  },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "focus-trap": "^7.5.2",
@@ -125,5 +130,6 @@
       ".vue"
     ],
     "report-dir": "coverage/cypress"
-  }
+  },
+  "packageManager": "yarn@4.17.0"
 }
