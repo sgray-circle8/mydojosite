@@ -85,7 +85,8 @@
         }
       }
 
-      &_Name_Holder, &_Email_Holder {
+      &_Name_Holder,
+      &_Email_Holder {
         width: 100%;
 
         .middleColumn .text {
@@ -177,7 +178,6 @@
   @media (min-width: 992px) {
     width: 50%;
   }
-
 }
 
 .rc-anchor-pt {

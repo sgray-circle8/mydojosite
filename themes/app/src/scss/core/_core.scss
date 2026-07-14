@@ -1,7 +1,7 @@
 :root {
   --gap: 16px;
   --pad: 16px;
-  --bg: #CFD3DAFF;
+  --bg: #cfd3daff;
   --card: #fff;
   --accent: #111827;
   --muted: #6b7280;
@@ -15,7 +15,7 @@
 
   @media (min-width: 768px) {
     --gap: 18px;
-    --pad: 18px
+    --pad: 18px;
   }
 
   @media (min-width: 992px) {
@@ -24,17 +24,17 @@
   }
 }
 
-*  {
-  box-sizing: border-box
+* {
+  box-sizing: border-box;
 }
 
 html,
 body {
   height: 100%;
   margin: 0;
-  font-family: var(--font-family),serif;
+  font-family: var(--font-family), serif;
   background: var(--bg);
-  color: #111827
+  color: #111827;
 }
 
 .wrap {
@@ -103,7 +103,7 @@ body {
   .col {
     background: linear-gradient(180deg, #fff, #fbfdff);
     border-radius: 8px;
-    min-height: 100px
+    min-height: 100px;
   }
 
   @media (min-width: 768px) {
@@ -117,5 +117,5 @@ h2 {
 }
 
 p {
-  margin: 0
+  margin: 0;
 }

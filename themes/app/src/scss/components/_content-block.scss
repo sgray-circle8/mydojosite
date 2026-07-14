@@ -18,7 +18,8 @@
         margin-left: 0 !important;
         height: auto !important;
 
-        tr, td {
+        tr,
+        td {
           height: auto !important; // Override 141px / 70px heights
           padding: 0 !important;   // Override inline padding-left: 40px
           vertical-align: top;

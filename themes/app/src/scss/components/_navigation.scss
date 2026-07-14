@@ -27,7 +27,7 @@
   }
 
   /* Hide the mobile menu toggle on desktop */
-  @media (min-width:768px) {
+  @media (min-width: 768px) {
     display: none;
   }
 }
@@ -89,7 +89,7 @@ nav.primary {
       outline-color: var(--accent);
     }
 
-    @media (min-width:768px) {
+    @media (min-width: 768px) {
       border-bottom: none;
       font-size: 0.95rem;
       border-radius: 6px;
@@ -97,7 +97,7 @@ nav.primary {
     }
   }
 
-  @media (min-width:768px) {
+  @media (min-width: 768px) {
     position: static;
     width: auto;
     height: auto;
@@ -128,4 +128,3 @@ nav.primary {
     display: none !important;
   }
 }
-
